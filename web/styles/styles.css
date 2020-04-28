@@ -20,12 +20,15 @@ header[role="banner"] #logo-main {
     margin: 0px auto;
     max-width: 300px;
   }
-  
   #navbar-primary.navbar-default {
     background: transparent;
     border: none;
   }
-
+  #navbar-primary.navbar-default .navbar-nav {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+  }
   #navbar-primary.navbar-default .navbar-nav > li {
     font-family: 'Special Elite', cursive;
   }
