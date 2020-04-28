@@ -27,4 +27,5 @@
   </div>
 </div>
   
+<?php include '../common/footer.php'; ?>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/web/common/footer.php'; ?>
