@@ -1,5 +1,5 @@
 <div id="logoarea">
-<img id="logo-main" src="../images/LogoCodeOtter.png" alt="Logo Thing main logo">
+<img id="logo-main" src="../images/CodeOtterLogo.png" alt="Code Otter Logo">
 </div>
 
 <nav id="navbar-primary" class="navbar navbar-default" role="navigation">

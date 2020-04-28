@@ -1,3 +1,4 @@
+<?php include '../common/header.php'; ?>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/web/common/header.php'; ?>
 
     <div class="container-fluid text-center">    
