@@ -11,6 +11,7 @@
 <body>
     <header role="banner">
     <nav>
+        <?php include 'nav.php'; ?>
         <?php include $_SERVER['DOCUMENT_ROOT'].'/web/common/nav.php'; ?>
     </nav>
     </header>
