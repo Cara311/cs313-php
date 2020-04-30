@@ -1,31 +1,22 @@
 
 <?php include '../common/header.php'; ?>
-<?php include $_SERVER['DOCUMENT_ROOT'].'../common/header.php'; ?>
 
-    <div class="container-fluid text-center">    
+<div class="container-fluid text-center">    
   <div class="row content">
-    <div class="col-sm-2 sidenav">
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-    </div>
-    <div class="col-sm-8 text-left"> 
+    
+    <div class="col-sm-9 text-left center"> 
       <h1>Code Otter</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <hr>
-      <h3>Test</h3>
-      <p>Lorem ipsum...</p>
+      <p>Welcome to Code Otter. This website is a portfolio of my school coding projects</p>
     </div>
-    <div class="col-sm-2 sidenav">
+    <div class="col-sm-3 sidenav">
       <div class="well">
-        <p>ADS</p>
+      <h3>Why Code Otter?</h3>
+      <p>I'm calling this site Code Otter because I wanted to do something a little different than just portfolio site. I like coding and otters, so I combined the two.</p>
       </div>
-      <div class="well">
-        <p>ADS</p>
-      </div>
+     
     </div>
   </div>
 </div>
   
+  
 <?php include '../common/footer.php'; ?>
-<?php include $_SERVER['DOCUMENT_ROOT'].'/web/common/footer.php'; ?>

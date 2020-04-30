@@ -14,16 +14,17 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
+        <li><a href="../views/home.php">Home</a></li>
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Assignments <span class="caret"></span></a>
+          <a class="dropdown-toggle" data-toggle="dropdown" href="assignments.php">Assignments <span class="caret"></span></a>
           <ul class="dropdown-menu">
+            <li><a href="../views/assignment.php">Assignment Links</a></li>
             <li><a href="#">Assignment 1</a></li>
             <li><a href="#">Assignment 2</a></li>
             <li><a href="#">Assignment 3</a></li>
           </ul>
         </li>
-        <li><a href="#">Other</a></li>
+        <li><a href="../views/otters.php">Otters</a></li>
       </ul>
     </div>
   </div>

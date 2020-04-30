@@ -7,12 +7,45 @@ h1 {
 }
 
 p {
-    font-family: 'Oswald', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 #logoarea {
-    background-color:  rgb(143, 174, 179);
+    background-color:  rgb(144, 219, 255);
 }
+
+#side {
+  background-color: rgb(232, 233, 236);
+  padding: 30px;
+  padding-bottom: 190px;
+}
+
+.center {
+  padding-left: 40px;
+  padding-top: 40px;
+  padding-bottom: 200px;
+  font-size: 18px;
+  background-image: url("../images/ripples.png");
+  z-index: -1;
+}
+
+footer {
+  text-align: center;
+}
+
+.col-container {
+  display: flex;
+  width: 100%;
+}
+
+main {
+  min-height: 500px;
+}
+
+.otterpic {
+  max-width: 400px;
+}
+
 
 /*Downloaded from https://www.codeseek.co/davidcochran/bootstrap-navbar-with-logo-centered-above-Dihnl */
 header[role="banner"] #logo-main {
@@ -24,11 +57,11 @@ header[role="banner"] #logo-main {
     background: transparent;
     border: none;
   }
-  #navbar-primary.navbar-default .navbar-nav {
+  /*#navbar-primary.navbar-default .navbar-nav {
     position: absolute;
     left: 50%;
-    transform: translatex(-50%);
-  }
+    transform: translatex(-50%); 
+  }*/
   #navbar-primary.navbar-default .navbar-nav > li {
     font-family: 'Special Elite', cursive;
     font-size: 18px;
