@@ -40,6 +40,10 @@ footer {
   font-family: 'Quicksand', sans-serif;
 }
 
+li {
+  font-family: 'Quicksand', sans-serif;
+}
+
 .col-container {
   display: flex;
   width: 100%;
@@ -53,9 +57,6 @@ main {
   max-width: 250px;
 }
 
-#ottericon {
-  width: 100px;
-}
 
 #ottericon {
   width: 100px;
