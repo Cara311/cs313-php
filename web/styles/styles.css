@@ -63,6 +63,16 @@ img#ottericon {
   animation-iteration-count:infinite;
 }
 
+footer img {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation: myfirst 8s 2;
+  animation-direction: alternate;
+  animation-play-state: paused; 
+  animation-iteration-count:infinite;
+}
+
 #ottericon:hover {
   animation-play-state: running;
 }
