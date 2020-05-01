@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Special+Elite&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/style.css">
     <title>My Website</title>
 </head>
 <body>
