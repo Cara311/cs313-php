@@ -59,7 +59,6 @@ main {
 
 #ottericon {
   width: 100px;
-  height: 100px;
   position: relative;
   animation: myfirst 8s 2;
   animation-direction: alternate;
