@@ -2,11 +2,10 @@
 
 <footer>
     <hr>
-    <img src="../images/otter-facing-right.png" alt="otter icon" id="ottericon">
     <p>&copy; CODE OTTER, All rights reserved.<br>
         All images used are believed to be in "Fair Use". Please notify the author if any are not and they will be removed.<br>
-        Last Updated: <?php echo date("l jS \of F Y"); ?>
-        <div id="freepik">Otter icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        Last Updated: <?php echo date("l jS \of F Y"); ?> <br>
+        Otter icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
     </p>
 </footer>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
