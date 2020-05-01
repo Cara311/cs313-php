@@ -1,10 +1,8 @@
 </main>
 
 <footer>
-    <div>
-        <img src="../images/otter-facing-right.png" alt="otter icon" id="ottericon">
-    </div>
     <hr>
+    <img src="../images/otter-facing-right.png" alt="otter icon" id="ottericon">
     <p>&copy; CODE OTTER, All rights reserved.<br>
         All images used are believed to be in "Fair Use". Please notify the author if any are not and they will be removed.<br>
         Last Updated: <?php echo date("l jS \of F Y"); ?>
