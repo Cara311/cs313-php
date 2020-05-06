@@ -14,7 +14,20 @@
 
         <!--Radio list of major-->
 
-        <input type="radio" id="CS" name="major" value="Computer Science">
+        <?php
+            $majors = array(
+
+                "Computer Science"=>"CS", "Web Design and Development"=>"WebDev", "Computer Information Technology"=>"CIT", "Computer Engineering"=>"CE"
+            );
+
+            foreach($majors as $value=>$key) {
+                echo "<input type='radio' id='".$key."' name='major' value='".$value."'>";
+                echo "<label for='.$key.'>".$value."</label><br>";
+            }
+        ?>
+
+
+       <!--  <input type="radio" id="CS" name="major" value="Computer Science">
 
         <label for="CS">Computer Science</label><br>
 
@@ -28,7 +41,7 @@
 
         <input type="radio" id="CE" name="major" value="Computer Engineering">
 
-        <label for="CE">Computer Engineering</label><br><br>
+        <label for="CE">Computer Engineering</label><br><br> -->
 
         <!--Which countries did the user visit?-->
 
