@@ -75,6 +75,20 @@ main {
   100%  {left: 800px; top: 0px;}
 }
 
+.products {
+  border: 1px solid rgb(105, 105, 105);
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.addbtn {
+  margin-top: 10px;
+}
+
+
+
+
 
 /*Downloaded from https://www.codeseek.co/davidcochran/bootstrap-navbar-with-logo-centered-above-Dihnl */
 header[role="banner"] #logo-main {

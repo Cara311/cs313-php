@@ -45,6 +45,7 @@ $information = array(
     <p><b>Major: </b><span><?php echo $major ?></span></p>
 
     <p><b>Comments: </b><span><?php echo $comments ?></span></p>
+    <p>You have been to the following places:</p>
 
     <?php echo "<p><b>Places: </b><span>";
 
