@@ -91,6 +91,15 @@ main {
   margin-top: 15px;
 }
 
+.bottombtn {
+  margin-top: 20px;
+}
+
+#ordertotal {
+  font-size: 18px;
+  color: green;
+}
+
 
 
 /*Downloaded from https://www.codeseek.co/davidcochran/bootstrap-navbar-with-logo-centered-above-Dihnl */

@@ -1,4 +1,6 @@
 <?php
+//I followed a tutorial from https://www.youtube.com/watch?v=k4fBDZHdQMg to help me with this project
+
 session_start();
 $product_ids = array();
 
