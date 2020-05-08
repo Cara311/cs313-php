@@ -20,7 +20,7 @@
           <ul class="dropdown-menu">
             <li><a href="../views/assignment.php">Assignment Links</a></li>
             <li><a href="../views/team1.php">Week 3 Team Activity</a></li>
-            <li><a href="#">Assignment 2</a></li>
+            <li><a href="../views/shop.php">Week 3 Assignment</a></li>
             <li><a href="#">Assignment 3</a></li>
           </ul>
         </li>
