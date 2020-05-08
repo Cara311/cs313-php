@@ -1,5 +1,17 @@
 <?php
 session_start();
+
+if(filter_input(INPUT_GET, 'action') == 'delete') {
+    //Loop through to find a match to the GET id 
+    foreach($_SESSION['shopping_cart'] as $key => $product){
+        if ($product['id'] == filter_input(INPUT_GET, 'id')) {
+            //if the id matches, remove that item from the cart
+            unset($_SESSION['shopping_cart'][$key]);
+        }
+    }
+    //reset session array keys so they match with $product_ids array
+    $_SESSION['shopping_cart'] = array_values($_SESSION['shopping_cart']);
+}
 ?>
 
 
@@ -18,6 +30,8 @@ session_start();
         </tr>
 
         <?php
+        
+
             if(!empty($_SESSION['shopping_cart'])){
 
                 $total = 0; //Calculate total for all products
@@ -39,14 +53,10 @@ session_start();
         </tr>
 
         <?php
-                $final_total = $total + ($product['quantity'] * $product['price']);
             }
         }
         ?>
-        <tr>
-            <td colspan="3" align="right" class="total">Total</td>
-            <td align="right" class="total">$ <?php echo number_format($final_total, 2); ?></td>
-        </tr>
+      
     </table>
 
     <a href="shop.php" class="btn btn-info">Keep Shopping</a>

@@ -4,6 +4,7 @@ $product_ids = array();
 
 
 
+
 //Check to see if there is a shopping cart after the add to cart button is pushed
 if(filter_input(INPUT_POST, 'add_to_cart')){
     if(isset($_SESSION['shopping_cart'])){
@@ -44,28 +45,6 @@ if(filter_input(INPUT_POST, 'add_to_cart')){
         );
     }
 }
-if(filter_input(INPUT_GET, 'action') == 'delete') {
-    //Loop through to find a match to the GET id 
-    foreach($_SESSION['shopping_cart'] as $key => $product){
-        if ($product['id'] == filter_input(INPUT_GET, 'id')) {
-            //if the id matches, remove that item from the cart
-            unset($_SESSION['shopping_cart'][$key]);
-        }
-    }
-    //make sure keys match product ids
-    $_SESSION['shopping_cart'][$i]['quantity'] += filter_input(INPUT_POST, 'quantity');
-}
-
-
-
-pre_r($_SESSION);
-
-    function pre_r($array){
-        echo '<pre>';
-        print_r($array);
-        echo '</pre>';
-    }
-
 ?>
 
 <?php include '../common/header.php'; ?>
