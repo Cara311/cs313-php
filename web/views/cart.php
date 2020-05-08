@@ -60,7 +60,7 @@ if(filter_input(INPUT_GET, 'action') == 'delete') {
     </table>
 
     <a href="shop.php" class="btn btn-info">Keep Shopping</a>
-    <a href="checout.php" class="btn btn-info">Checkout</a>
+    <a href="checkout.php" class="btn btn-info">Checkout</a>
     
     </div>
 

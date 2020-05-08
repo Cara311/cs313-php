@@ -53,7 +53,7 @@ if(filter_input(INPUT_POST, 'add_to_cart')){
    
 
     <div class="col-sm-4 col-md-3">
-        <form method="post" action="shop.php?action=add&id=1">
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"])?>?action=add&id=1">
             <div class="products">
                 <img src= "../images/trampoline.jpg" alt="" class="img-responsive">
                 <h4 class="text-info">Trampoline Cake Topper</h4>
@@ -67,7 +67,7 @@ if(filter_input(INPUT_POST, 'add_to_cart')){
     </div>
 
     <div class="col-sm-4 col-md-3">
-        <form method="post" action="shop.php?action=add&id=2">
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"])?>?action=add&id=2">
             <div class="products">
                 <img src= "../images/tandem.jpg" alt="" class="img-responsive">
                 <h4 class="text-info">Tandem Cake Topper</h4>
@@ -81,7 +81,7 @@ if(filter_input(INPUT_POST, 'add_to_cart')){
     </div>
 
     <div class="col-sm-4 col-md-3">
-        <form method="post" action="cart.php?action=add&id=3">
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"])?>?action=add&id=3">
             <div class="products">
                 <img src= "../images/centerpiece.jpg" alt="" class="img-responsive">
                 <h4 class="text-info">Bike Centerpiece</h4>
@@ -95,7 +95,7 @@ if(filter_input(INPUT_POST, 'add_to_cart')){
     </div>
 
     <div class="col-sm-4 col-md-3">
-        <form method="post" action="cart.php?action=add&id=4">
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"])?>?action=add&id=4">
             <div class="products">
                 <img src= "../images/etchedrock.jpg" alt="" class="img-responsive">
                 <h4 class="text-info">Etched Rock</h4>
@@ -111,9 +111,5 @@ if(filter_input(INPUT_POST, 'add_to_cart')){
     <a href="cart.php" class="btn btn-info">View Cart</a>
 
 </div>
-
-
-
-
 
 <?php include '../common/footer.php'; ?>
