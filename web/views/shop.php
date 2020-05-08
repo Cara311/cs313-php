@@ -2,9 +2,6 @@
 session_start();
 $product_ids = array();
 
-
-
-
 //Check to see if there is a shopping cart after the add to cart button is pushed
 if(filter_input(INPUT_POST, 'add_to_cart')){
     if(isset($_SESSION['shopping_cart'])){
@@ -108,7 +105,7 @@ if(filter_input(INPUT_POST, 'add_to_cart')){
         </form>
     </div>
 
-    <a href="cart.php" class="btn btn-info">View Cart</a>
+    <a href="cart.php" class="btn btn-info" id="view">View Cart</a>
 
 </div>
 
