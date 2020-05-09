@@ -47,7 +47,7 @@ if(filter_input(INPUT_GET, 'action') == 'delete') {
             <td><?php echo number_format($product['quantity'] * $product['price'], 2); ?></td> 
             <td>
                 <a href="cart.php?action=delete&id=<?php echo $product['id']; ?>">
-                    <div class="btn-danger">Remove</div>
+                    <div class="btn-danger" id="remove">Remove</div>
                 </a>
             </td>  
         </tr>

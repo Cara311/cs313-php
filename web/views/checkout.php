@@ -13,25 +13,26 @@ session_start();
             <div class="products">
                 <h4 class="text-info">Checkout</h4>
                 <label for="fname">First name:</label><br>
-                <input type="text" name="fname" class="form-control">
+                <input type="text" name="fname" class="form-control" required pattern="[A-Za-z]{1,32}">
 
                 <label for="lname">Last name:</label><br>
-                <input type="text" name="lname" class="form-control">
+                <input type="text" name="lname" class="form-control" required pattern="[A-Za-z]{1,32}">
 
                 <label for="address">Address:</label><br>
-                <input type="text" name="address" class="form-control">
+                <input type="text" name="address" class="form-control" required>
 
                 <label for="city">City:</label><br>
-                <input type="text" name="city" class="form-control">
+                <input type="text" name="city" class="form-control" required pattern="[A-Za-z]{1,32}">
 
                 <label for="state">State:</label><br>
-                <input type="text" name="state" class="form-control">
+                <input type="text" name="state" class="form-control" required pattern="[A-Za-z]{1,2}">
 
                 <label for="zip">Zip Code:</label><br>
-                <input type="number" name="zip" class="form-control">
+                <input type="number" name="zip" class="form-control" required>
 
                 <input type="submit" name="submit_order" class="btn btn-info addbtn" value="Submit Order">
             </div>
+            
         </form>
         <a href="cart.php" class="btn btn-info bottombtn">Return to Cart</a>
         <a href="shop.php" class="btn btn-info bottombtn">Keep Shopping</a>

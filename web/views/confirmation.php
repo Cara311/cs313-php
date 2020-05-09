@@ -1,23 +1,24 @@
 <?php
 session_start();
+session_destroy();
 
-// define variables and set to empty values
+// Set variables to empty
 $fname = $lname = $address = $city = $state = $zip = "";
 
-//if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $fname = test_input($_POST["fname"]);
-  $lname = test_input($_POST["lname"]);
-  $address= test_input($_POST["address"]);
-  $city = test_input($_POST["city"]);
-  $state = test_input($_POST["state"]);
-  $zip = test_input($_POST["zip"]);
-//}
+//Send variables through validation
+  $fname = validate($_POST["fname"]);
+  $lname = validate($_POST["lname"]);
+  $address= validate($_POST["address"]);
+  $city = validate($_POST["city"]);
+  $state = validate($_POST["state"]);
+  $zip = validate($_POST["zip"]);
 
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
+
+function validate($input) {
+  $input = trim($input);
+  $input = stripslashes($input);
+  $input = htmlspecialchars($input);
+  return $input;
 }
 
 $_SESSION["fullname"] = $fname . " " . $lname;
@@ -32,6 +33,29 @@ $_SESSION["zip"] = $zip;
 
 <div class="container">
     <h3>Thank you for your order!</h3>
+    <div class="table-responsive">
+        <table class="table">
+            <tr><th colspan="5"><h3>Shipping Information</h3></th></tr>
+            <tr>
+                <th width="40">Name</th>
+                <th width="40">Address</th>
+                <th width="40">City</th>
+                <th width="40">State</th>
+                <th width="40">Zip</th>
+            </tr>
+
+            <tr>
+                <td><?php echo $_SESSION['fullname']; ?></td>
+                <td><?php echo $_SESSION['address']; ?></td>
+                <td><?php echo $_SESSION['city']; ?></td>
+                <td><?php echo $_SESSION['state']; ?></td>
+                <td><?php echo $_SESSION['zip']; ?></td>
+            </tr>
+
+        
+        </table>
+    </div>
+
     <div class="table-responsive">
         <table class="table">
             <tr><th colspan="5"><h3>Completed Order Details</h3></th></tr>
@@ -67,28 +91,6 @@ $_SESSION["zip"] = $zip;
         </table>
     </div>
 
-    <div class="table-responsive">
-        <table class="table">
-            <tr><th colspan="5"><h3>Shipping Information</h3></th></tr>
-            <tr>
-                <th width="40">Name</th>
-                <th width="40">Address</th>
-                <th width="40">City</th>
-                <th width="40">State</th>
-                <th width="40">Zip</th>
-            </tr>
-
-            <tr>
-                <td><?php echo $_SESSION['fullname']; ?></td>
-                <td><?php echo $_SESSION['address']; ?></td>
-                <td><?php echo $_SESSION['city']; ?></td>
-                <td><?php echo $_SESSION['state']; ?></td>
-                <td><?php echo $_SESSION['zip']; ?></td>
-            </tr>
-
-        
-        </table>
-    </div>
 </div>
 
 
