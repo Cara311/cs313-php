@@ -5,9 +5,8 @@
     <div class="row content">
     <div class="col-sm-9 text-left center"> 
       <h1>Assignment Links</h1>
-      <p><a href="#">Assignment 1</a></p>
-      <p><a href="#">Assignment 2</a></p>
-      <p><a href="#">Assignment 3</a></p>
+      <p><a href="shop.php">Week 3 Assignment</a></p>
+      
      
     </div>
     <div class="col-sm-3 sidenav">

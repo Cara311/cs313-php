@@ -9,9 +9,9 @@ if(filter_input(INPUT_POST, 'add_to_cart')){
     if(isset($_SESSION['shopping_cart'])){
         //Keep track of amount of products in shopping cart
         $count = count($_SESSION['shopping_cart']);
-
-        
+ 
         $product_ids = array_column($_SESSION['shopping_cart'], 'id');
+        
         //Check to see if the product already exists in shopping cart array
         if(!in_array(filter_input(INPUT_GET, 'id'), $product_ids)){
             $_SESSION['shopping_cart'][$count] = array (
@@ -26,7 +26,7 @@ if(filter_input(INPUT_POST, 'add_to_cart')){
             //Match the array key to the product id of the item being added
             for ($i = 0; $i < count($product_ids); $i++){
                 if ($product_ids[$i] == filter_input(INPUT_GET, 'id')) {
-                    //add quantity to the existing quantity
+                    //Add quantity to the existing quantity
                     $_SESSION['shopping_cart'][$i]['quantity'] += filter_input(INPUT_POST, 'quantity');
                 }
             }
