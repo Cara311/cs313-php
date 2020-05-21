@@ -120,6 +120,15 @@ main {
   border-radius: .25rem;
 }
 
+.card-body {
+  padding: 10px;
+}
+
+.saveidea {
+  margin-bottom: 10px;
+  background-color: rgb(241, 240, 240);
+}
+
 
 /*Downloaded from https://www.codeseek.co/davidcochran/bootstrap-navbar-with-logo-centered-above-Dihnl */
 header[role="banner"] #logo-main {
