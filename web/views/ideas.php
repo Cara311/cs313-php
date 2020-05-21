@@ -27,8 +27,15 @@ if(isset($_POST['interest'])) {
 $searchText = validateInput($_POST['interest']);
 // Now run the query to find the text in the database, and then save the results as a variable
 $gifts = searchQuery($searchText, $db);
+}
+?>
 
-print_r($gifts);
+<?php  
+
+foreach ($gifts as $row)
+{
+  echo "<a href='scrip-details.php?id={$row['id']}'<strong>" . $row['gift_name'] .' ' . $row['price'] . '</strong></a>';
+  echo '<br/><br/>';
 }
 ?>
 
