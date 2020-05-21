@@ -20,7 +20,7 @@ function searchQuery($name, $db) {
 //Display info for specific idea  
 function displayQuery($id, $db) {
 
-    $stmt = $db->prepare('SELECT * FROM gifts WHERE id = :id');
+    $stmt = $db->prepare('SELECT * FROM gifts AS g JOIN interests AS i ON g.interests_id = i.id WHERE g.id = :id');
     //$name= '$name';
     $stmt->bindValue(':id', $id, PDO::PARAM_INT);
     $stmt->execute();
