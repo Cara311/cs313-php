@@ -22,7 +22,7 @@ $gifts = searchQuery($searchText, $db);
 <?php  
 foreach ($gifts as $row)
 {
-  echo "<li><a href='ideaDetails.php?id={$row['g.id']}'<strong>" . $row['gift_name'] . '</strong></a></li>';
+  echo "<li><a href='ideaDetails.php?id={$row['id']}'<strong>" . $row['gift_name'] . '</strong></a></li>';
 }
 ?>
 </ul>
