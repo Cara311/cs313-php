@@ -29,7 +29,11 @@ function displayQuery($id, $db) {
     return $idea;
     }   
 
-    
+    function search_interests($db) {
+        
+        $statement = $db->query('SELECT interest FROM interests');
+        $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+    }    
 
 //function to check if email is valid
 
