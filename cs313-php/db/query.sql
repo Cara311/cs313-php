@@ -41,6 +41,9 @@ INSERT INTO gifts (gift_name, price, description, interests_id) VALUES ('makeup 
 INSERT INTO gifts (gift_name, price, description, interests_id) VALUES ('butterfly shoes', 90, 'These purple shoes have butterfly wings on the back', 1);
 
 INSERT INTO interests (interest) VALUES ('fashion');
+INSERT INTO interests (interest) VALUES ('outdoors');
+INSERT INTO interests (interest) VALUES ('animals');
+INSERT INTO interests (interest) VALUES ('gaming');
 
 
 --Query by Interest
