@@ -29,6 +29,16 @@ function displayQuery($id, $db) {
     return $idea;
     }   
 
+//Display Current Gifts  
+function listGifts($db) {
+
+    foreach ($db->query('SELECT gift.gift_name FROM gifts') as $row)
+    {
+      echo 'Idea: ' . $row['gift_name'];
+      echo '<br/>';
+    }
+    }      
+
 //function to check if email is valid
 
 //function to build detailed product display

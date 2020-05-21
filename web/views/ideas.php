@@ -13,7 +13,6 @@ if(isset($_POST['interest'])) {
 $searchText = validateInput($_POST['interest']);
 // Now run the query to find the text in the database, and then save the results as a variable
 $gifts = searchQuery($searchText, $db);
- print_r($gifts);
 }
 ?>
 
