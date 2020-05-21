@@ -37,7 +37,6 @@ foreach ($gifts as $row)
 {
   echo "<div class='col-sm-4 col-md-3 gift'>";
   echo "<a href='scrip-details.php?id={$row['id']}'<strong>" . $row['gift_name'] . '</strong></a>';
-  echo '<br/>';
 }
 ?>
    
