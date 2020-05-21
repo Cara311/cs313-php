@@ -40,15 +40,15 @@ foreach ($idea as $row)
     echo "<h4 class='card-title'>" . $row['gift_name'] . "</h4>";
     echo "<p class='card-text'>" . $row['description'] . "</p>";
     echo "<p class='card-text price'>" . $row['price'] . "</p>";
-    echo " <input type='submit' name='add_to_list' class='btn btn-info addbtn' id='{$row[id]}' value='Save to Idea List'>";
+    echo " <input type='submit' name='add_to_list' class='btn btn-info addbtn' id='{$row[id]}' value='Save to Idea List'><br>";
     echo "<a href='#' class='btn btn-info'>View List</a>";
     echo "</div>";
     echo "</div>";
    // echo "</form>"
 }
 ?>
-        <div class="col-sm-4"></div>
         </div>
+        <div class="col-sm-4"></div>
     </div>
 
 </div>
