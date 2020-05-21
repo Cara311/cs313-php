@@ -24,7 +24,9 @@ $db = db_connect();
 ?>
 
 <div class="container">
-   <div class="card">
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="card">
 
    
 <?php  
@@ -32,17 +34,21 @@ $db = db_connect();
 foreach ($idea as $row)
 {
     //echo "<form method='post' action='htmlspecialchars($_SERVER['PHP_SELF'])?action=add&id=1'>";
+    echo "<div class='col-sm-4'>";
     echo "<img class='card-img-top' src='../images/{$row[image_name]}' alt='{$row[gift_name]}'>";
     echo "<div class='card-body'>";
     echo "<h4 class='card-title'>" . $row['gift_name'] . "</h4>";
     echo "<p class='card-text'>" . $row['description'] . "</p>";
     echo "<p class='card-text price'>" . $row['price'] . "</p>";
     echo " <input type='submit' name='add_to_list' class='btn btn-info addbtn' id='{$row[id]}' value='Save to Idea List'>";
+    echo "<a href='#' class='btn btn-info'>View List</a>";
+    echo "</div>";
     echo "</div>";
    // echo "</form>"
 }
 ?>
-        <a href="#" class="btn btn-primary">View List</a>
+        <div class="col-sm-4"></div>
+        </div>
     </div>
 
 </div>
