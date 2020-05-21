@@ -27,7 +27,7 @@ if(isset($_POST['interest'])) {
 $searchText = validateInput($_POST['interest']);
 // Now run the query to find the text in the database, and then save the results as a variable
 $gifts = searchQuery($searchText, $db);
-  print_r($gifts);
+ // print_r($gifts);
 }
 ?>
 
@@ -35,8 +35,8 @@ $gifts = searchQuery($searchText, $db);
 <?php  
 foreach ($gifts as $row)
 {
-  echo "<div class='col-sm-4 col-md-3 gift'>";
-  echo "<a href='scrip-details.php?id={$row['id']}'<strong>" . $row['gift_name'] . '</strong></a>';
+  echo "<a href='ideaDetails.php?id={$row['id']}'<strong>" . $row['gift_name'] . '</strong></a>';
+  echo "<br>";
 }
 ?>
    
