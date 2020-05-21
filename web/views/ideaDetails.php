@@ -12,28 +12,26 @@ $db = db_connect();
      $searchText = validateInput($_GET['id']);
      // Now run the query to find the text in the database, and then save the results as a variable
      $idea = displayQuery($searchText, $db);
-   print_r($idea);
- 
    }
 ?>
 
+<div class="container">
+   <div class="card">
 <?php  
 
 foreach ($idea as $row)
-
 {
-
-  echo '<strong>' . $row['gift_name'] .' ' . $row['description'] .':' . $row['image_name'] . '</strong>';
-
-  echo ' - "' . $row['price'] .'"';
-
-  echo '<br/><br/>';
+    echo "<img class='card-img-top' src='../images/{$row[image_name]}' alt='{$row[gift_name]}' style='width:100%'>";
+    echo "<div class='card-body'>";
+    echo "<h4 class='card-title'>" . $row['gift_name'] . "</h4>";
+    echo "<p class='card-text'>" . $row['decription'] . "</p>";
+    echo "<p class='card-text price'>" . $row['price'] . "</p>";
+    echo "</div>";
 
 }
-
-
 ?>
+    </div>
 
-
+</div>
 
 <?php include '../common/footer.php'; ?>
