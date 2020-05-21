@@ -13,7 +13,7 @@ function validateInput($data){
 }
 
 function searchQuery($name, $db) { 
-$stmt = $db->prepare('SELECT * FROM gifts AS g JOIN interests AS i ON g.id = i.gift_id WHERE i.interest = :name');
+$stmt = $db->prepare('SELECT * FROM gifts AS g JOIN interests AS i ON g.interests_id = i.id WHERE i.interest = :name');
 $stmt->bindValue(':name', $name, PDO::PARAM_STR);
 $stmt->execute();
 $gift = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -34,8 +34,8 @@ $gifts = searchQuery($searchText, $db);
 <?php  
 foreach ($gifts as $row)
 {
-  echo "<div class='col-sm-4 col-md-3'><a href='scrip-details.php?id={$row['id']}'<strong>" . $row['gift_name'] .' ' . $row['price'] . '</strong></a></div>';
-  echo '<br/><br/>';
+  echo "<div class='col-sm-4 col-md-3'><a href='scrip-details.php?id={$row['id']}'<strong><br>";
+  echo "<a href='scrip-details.php?id={$row['gift_name']}'<strong><br></div>";
 }
 ?>
    
