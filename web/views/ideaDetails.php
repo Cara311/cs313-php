@@ -26,15 +26,13 @@ $db = db_connect();
 <div class="container">
     <div class="row">
         <div class="col-sm-4"></div>
-        <div class="card">
-
-   
 <?php  
 
 foreach ($idea as $row)
 {
     //echo "<form method='post' action='htmlspecialchars($_SERVER['PHP_SELF'])?action=add&id=1'>";
     echo "<div class='col-sm-4'>";
+    echo "<div class='card'>";
     echo "<img class='card-img-top' src='../images/{$row[image_name]}' alt='{$row[gift_name]}'>";
     echo "<div class='card-body'>";
     echo "<h4 class='card-title'>" . $row['gift_name'] . "</h4>";
