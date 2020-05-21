@@ -22,14 +22,13 @@ return $gift;
 
 // If the page loads as a POST request, look for this variable, and if it is set
 if(isset($_POST['interest'])) {
-
-echo "<h1>" . $_POST['interest'] . "</h1>";
+//echo "<h1>" . $_POST['interest'] . "</h1>";
 // Validate & sanitize the input
 $searchText = validateInput($_POST['interest']);
 // Now run the query to find the text in the database, and then save the results as a variable
 $gifts = searchQuery($searchText, $db);
 
-print_r($giftss);
+print_r($gifts);
 }
 ?>
 

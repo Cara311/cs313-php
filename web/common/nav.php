@@ -21,7 +21,7 @@
             <li><a href="../views/assignment.php">Assignment Links</a></li>
             <li><a href="../views/team1.php">Week 3 Team Activity</a></li>
             <li><a href="../views/shop.php">Week 3 Assignment</a></li>
-            <li><a href="../views/gift.php">week 4 Assignment</a></li>
+            <li><a href="../views/gift.php">Week 4 Assignment</a></li>
           </ul>
         </li>
         <li><a href="../views/otters.php">Otters</a></li>
