@@ -30,14 +30,16 @@ $gifts = searchQuery($searchText, $db);
 }
 ?>
 
+<div class="container">
 <?php  
-
 foreach ($gifts as $row)
 {
-  echo "<a href='scrip-details.php?id={$row['id']}'<strong>" . $row['gift_name'] .' ' . $row['price'] . '</strong></a>';
+  echo "<div class='col-sm-4 col-md-3'><a href='scrip-details.php?id={$row['id']}'<strong>" . $row['gift_name'] .' ' . $row['price'] . '</strong></a></div>';
   echo '<br/><br/>';
 }
 ?>
+   
+</div>
 
 
 <?php include '../common/footer.php'; ?>
