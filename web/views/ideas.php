@@ -2,7 +2,7 @@
 <?php
 session_start();
 //Get the database info 
-require "dbConnect.php";
+require "../library/dbConnect.php";
 $db = get_db();
 
 function validateInput($data){
