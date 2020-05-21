@@ -21,7 +21,11 @@ $db = db_connect();
         </div>
         <div class="col-sm-8" style="background-color:lavenderblush;">
             <?php  
-                listGifts($db);
+                foreach ($db->query('SELECT gifts.gift_name FROM gifts') as $row)
+                {
+                  echo 'Idea: ' . $row['gift_name'];
+                  echo '<br/>';
+                }
             ?>
         </div>
   </div>
