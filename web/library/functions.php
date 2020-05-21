@@ -10,7 +10,7 @@ function validateInput($data){
 
 //Search for gifts based on interests
 function searchQuery($name, $db) { 
-    $stmt = $db->prepare('SELECT g.gift_name, g.price, g.description, g.image_name, g.gift_link, i.interest FROM gifts AS g JOIN interests i ON i.id = g.interests_id WHERE i.interest = :name');
+    $stmt = $db->prepare('SELECT g.id, g.gift_name, g.price, g.description, g.image_name, g.gift_link, i.interest FROM gifts AS g JOIN interests i ON i.id = g.interests_id WHERE i.interest = :name');
     //$stmt = $db->prepare('SELECT * FROM gifts AS g JOIN interests AS i ON g.interests_id = i.id WHERE i.interest = :name');
     $stmt->bindValue(':name', $name, PDO::PARAM_STR);
     $stmt->execute();
