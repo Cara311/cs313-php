@@ -17,10 +17,28 @@ function searchQuery($name, $db) {
     return $gift;
     }
 
+//Display info for specific idea  
+function displayQuery($id, $db) {
+
+    $stmt = $db->prepare('SELECT * FROM gifts WHERE id = :id');
+    //$name= '$name';
+    $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+    $stmt->execute();
+    $idea = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $idea;
+    }   
+
 //function to check if email is valid
 
 //function to build detailed product display
 
+
+
 //function to build list of interests options
+
+//Show a list of gift ideas
+//Search for gift idea by interest
+//Save a gift idea
+//Show detailed gift idea
 
 ?>
