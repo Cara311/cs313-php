@@ -26,7 +26,7 @@ foreach ($gifts as $row)
 }
 ?>
 </ul>
-   
+    <a href="gift.php" class="btn btn-info bottombtn">Return to Search</a>   
 </div>
 
 
