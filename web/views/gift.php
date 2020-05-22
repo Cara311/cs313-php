@@ -30,12 +30,6 @@ $interests = search_interests($db);
             </select> 
                 <button type='submit' class='btn btn-info'>Search</button>
             </form>
-
-            <h3>Enter Your Name</h3>
-            <form method='post' action='ideas.php'>
-            
-                <button type='submit' class='btn btn-info'>Search</button>
-            </form>
         </div>
         <div class="col-sm-4">
             <h3>Possible Gift Ideas</h3>
@@ -51,10 +45,9 @@ $interests = search_interests($db);
         </div>
 
         <div class="row">
-            <div class="col-sm-2"></div>
-            <div class="col-sm-4"><a href="account.php"><h3>Sign Up For Account</h3></a></div>
-            <div class="col-sm-4"></div>
-            <div class="col-sm-2"></div>
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6"><a href="account.php"><h3>Sign Up For Account</h3></a></div>
+            <div class="col-sm-3"></div>
         </div>
     </div>
     
