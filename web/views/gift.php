@@ -18,12 +18,12 @@ $interests = search_interests($db);
             <h3>Search For Gift Ideas</h3>
             <h4>Select an Interest</h4>
             <form method='post' action='ideas.php'>
-            <select id="cars" name="cars">
+            <select id="ioptions" name="interest">
                 <option selected="selected">Choose an Interest</option>
                 <?php
                 foreach ($interests as $option)
                 {
-                    echo "<option name='interest' value='{$option[interest]}'>" . $option['interest'] . "</option>";
+                    echo "<option value='{$option[interest]}'>" . $option['interest'] . "</option>";
                 }
                 ?>          
             </select> 
