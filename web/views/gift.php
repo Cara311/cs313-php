@@ -21,11 +21,12 @@ if(isset($_POST['clientFirstname'])) {
 <main>
     <h1 class="giftIdeas">Gift Ideas</h1>
     <hr>
-    <h2><?php if(isset($_SESSION['clientFirstname'])) { echo 'Welcome,' . $_SESSION['clientFirstname']; } ?></h2>
+    
     <div class="container">
         <div class="row">
         <div class="col-sm-2"></div>
         <div class="col-sm-4">
+            <h2><?php if(isset($_SESSION['clientFirstname'])) { echo 'Welcome, ' . $_SESSION['clientFirstname']; } ?></h2>
             <h3>Search For Gift Ideas By Interest</h3>
             <form method='post' action='ideas.php'>
             <select id="ioptions" name="interest">
