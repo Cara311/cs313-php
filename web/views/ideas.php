@@ -16,6 +16,7 @@ $gifts = searchQuery($searchText, $db);
 }
 ?>
 
+
 <div class="container">
 <ul>
 <?php  

@@ -27,7 +27,6 @@ $interests = search_interests($db);
                 }
                 ?>          
             </select> 
-                <input type='text' name='interest'>
                 <button type='submit'>Search</button>
             </form>
         </div>
