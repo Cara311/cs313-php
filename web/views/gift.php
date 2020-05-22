@@ -11,12 +11,12 @@ $interests = search_interests($db);
 
 
 <main>
-    <h1>Gift Ideas</h1>
+    <h1 id="giftIdeas">Gift Ideas</h1>
     <div class="container">
         <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-2">
+        <div class="col-sm-4">
             <h3>Search For Gift Ideas</h3>
-            <h4>Select an Interest</h4>
             <form method='post' action='ideas.php'>
             <select id="ioptions" name="interest">
                 <option selected="selected">Choose an Interest</option>
@@ -30,16 +30,17 @@ $interests = search_interests($db);
                 <button type='submit'>Search</button>
             </form>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-4">
             <h3>Available Gift Ideas</h3>
             <?php  
                 foreach ($db->query('SELECT gifts.gift_name FROM gifts') as $row)
                 {
-                  echo 'Idea: ' . $row['gift_name'];
+                  echo $row['gift_name'];
                   echo '<br/>';
                 }
             ?>
         </div>
+        <div class="col-sm-2">
   </div>
     </div>
     

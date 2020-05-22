@@ -129,6 +129,10 @@ main {
   background-color: rgb(241, 240, 240);
 }
 
+#giftIdeas {
+  text-align: center;
+}
+
 
 /*Downloaded from https://www.codeseek.co/davidcochran/bootstrap-navbar-with-logo-centered-above-Dihnl */
 header[role="banner"] #logo-main {
