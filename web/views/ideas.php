@@ -17,12 +17,12 @@ $gifts = searchQuery($searchText, $db);
 
 
 <div class="container">
-<h1 class="giftIdeas">Gift Ideas For Someone Who Likes $searchText</h1>
+<h1 class="giftIdeas">Gift Ideas For Someone Who Likes <?php $searchText ?></h1>
 <ul>
 <?php  
 foreach ($gifts as $row)
 {
-  echo "<li><a href='ideaDetails.php?id={$row['id']}' class='idealist' <strong>" . $row['gift_name'] . '</strong></a></li>';
+  echo "<li  class='idealist'><a href='ideaDetails.php?id={$row['id']}' <strong>" . $row['gift_name'] . '</strong></a></li>';
 }
 ?>
 </ul>
