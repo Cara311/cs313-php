@@ -12,6 +12,7 @@ $interests = search_interests($db);
 
 <main>
     <h1 class="giftIdeas">Gift Ideas</h1>
+    <hr>
     <div class="container">
         <div class="row">
         <div class="col-sm-2"></div>
@@ -31,7 +32,7 @@ $interests = search_interests($db);
             </form>
         </div>
         <div class="col-sm-4">
-            <h3>Available Gift Ideas</h3>
+            <h3>Possible Gift Ideas</h3>
             <?php  
                 foreach ($db->query('SELECT gifts.gift_name FROM gifts') as $row)
                 {

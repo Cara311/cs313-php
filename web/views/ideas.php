@@ -17,7 +17,7 @@ $gifts = searchQuery($searchText, $db);
 
 
 <div class="container">
-<h1 class="giftIdeas">Gift Ideas For Someone Who Likes <?php $searchText ?></h1>
+<h1 class="giftIdeas">Gift Ideas</h1>
 <ul>
 <?php  
 foreach ($gifts as $row)
