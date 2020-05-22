@@ -40,6 +40,7 @@ foreach ($idea as $row)
     echo "<p class='card-text price'>" . $row['price'] . "</p>";
     //Only have these button show up if someone has signed up for an account.
     echo " <input type='submit' name='add_to_list' class='btn btn-info' id='{$row[id]}' value='Save to Idea List'><br>";
+    echo "<br>";
     echo "<a href='#' class='btn btn-info'>View List</a>";
     echo "</div>";
     echo "<a href='gift.php' class='btn btn-info'>Go Back to Idea Search</a>";

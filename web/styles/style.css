@@ -129,8 +129,13 @@ main {
   background-color: rgb(241, 240, 240);
 }
 
-#giftIdeas {
+.giftIdeas {
   text-align: center;
+}
+
+.idealist {
+  list-style-type: none;
+  font-size: 18px;
 }
 
 
