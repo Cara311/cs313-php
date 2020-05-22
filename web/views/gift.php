@@ -23,7 +23,7 @@ $interests = search_interests($db);
                 <?php
                 foreach ($interests as $option)
                 {
-                    echo "<option value='{$option[interest]}'>" . $option['interest'] . "</option>";
+                    echo "<option name='interest' value='{$option[interest]}'>" . $option['interest'] . "</option>";
                 }
                 ?>          
             </select> 

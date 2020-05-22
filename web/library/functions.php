@@ -33,6 +33,7 @@ function displayQuery($id, $db) {
         
         $statement = $db->query('SELECT interest FROM interests');
         $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $results;
     }    
 
 //function to check if email is valid
