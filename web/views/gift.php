@@ -25,7 +25,7 @@ if(isset($_POST['clientFirstname'])) {
         <div class="row">
         <div class="col-sm-2"></div>
         <div class="col-sm-4">
-            <h2> <?php if(isset($_SESSION['clientFirstname'])) { echo $_SESSION['clientFirstname']; } ?></h2>
+            <h2>Welcome <?php if(isset($_SESSION['clientFirstname'])) { echo $_SESSION['clientFirstname']; } ?></h2>
             <h3>Search For Gift Ideas By Interest</h3>
             <form method='post' action='ideas.php'>
             <select id="ioptions" name="interest">
@@ -55,7 +55,10 @@ if(isset($_POST['clientFirstname'])) {
 
         <div class="row">
             <div class="col-sm-3"></div>
-            <div class="col-sm-6"><a href="account.php"><h3 id="account">Sign Up For Account</h3></a></div>
+            <div class="col-sm-6"> 
+            <?php if(!isset($_SESSION['clientFirstname'])) { echo "<a href='account.php'><h3 id='account'> Sign Up For Account <?php </h3></a>";} ?>
+            <?php if(isset($_SESSION['clientFirstname'])) { echo "<a href='account.php'><h3 id='account'> Log Out of Account </h3></a>"; } ?>
+            </div>
             <div class="col-sm-3"></div>
         </div>
     </div>
