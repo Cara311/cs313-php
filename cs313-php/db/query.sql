@@ -16,7 +16,7 @@ CREATE TABLE gifts (
 
   CREATE TABLE users (
     id SERIAL PRIMARY KEY,
-    user_name VARCHAR(255) NOT NULL,
+    user_name VARCHAR(255) NOT NULL UNIQUE,
     interest_id INT REFERENCES interests(id)
   );
 
