@@ -138,6 +138,10 @@ main {
   font-size: 18px;
 }
 
+#account {
+  text-align: center;
+}
+
 
 /*Downloaded from https://www.codeseek.co/davidcochran/bootstrap-navbar-with-logo-centered-above-Dihnl */
 header[role="banner"] #logo-main {

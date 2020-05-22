@@ -7,6 +7,14 @@ require "../library/functions.php";
 $db = db_connect();
 $interests = search_interests($db);
 
+// If the page loads as a POST request, look for this variable, and if it is set
+if(isset($_POST['clientFirstname'])) {
+    // Validate & sanitize the input
+    $name = validateInput($_POST['clientFirstname']);
+    // Now run the query to find the text in the database, and then save the results as a variable
+    $_SESSION["clientFirstname"] = $name;
+    }
+
 ?>
 
 
@@ -17,6 +25,7 @@ $interests = search_interests($db);
         <div class="row">
         <div class="col-sm-2"></div>
         <div class="col-sm-4">
+            <h2> <?php if(isset($_SESSION['clientFirstname'])) { echo $_SESSION['clientFirstname']; } ?></h2>
             <h3>Search For Gift Ideas By Interest</h3>
             <form method='post' action='ideas.php'>
             <select id="ioptions" name="interest">
@@ -46,7 +55,7 @@ $interests = search_interests($db);
 
         <div class="row">
             <div class="col-sm-3"></div>
-            <div class="col-sm-6"><a href="account.php"><h3>Sign Up For Account</h3></a></div>
+            <div class="col-sm-6"><a href="account.php"><h3 id="account">Sign Up For Account</h3></a></div>
             <div class="col-sm-3"></div>
         </div>
     </div>
