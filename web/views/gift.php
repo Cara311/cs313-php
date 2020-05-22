@@ -14,7 +14,7 @@ $interests = search_interests($db);
     <h1 id="giftIdeas">Gift Ideas</h1>
     <div class="container">
         <div class="row">
-        <div class="col-sm-2">
+        <div class="col-sm-2"></div>
         <div class="col-sm-4">
             <h3>Search For Gift Ideas</h3>
             <form method='post' action='ideas.php'>
@@ -40,7 +40,7 @@ $interests = search_interests($db);
                 }
             ?>
         </div>
-        <div class="col-sm-2">
+        <div class="col-sm-2"></div>
   </div>
     </div>
     
