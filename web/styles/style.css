@@ -142,6 +142,10 @@ main {
   text-align: center;
 }
 
+#ideaslist {
+  background-color: rgb(236, 236, 236);
+}
+
 
 /*Downloaded from https://www.codeseek.co/davidcochran/bootstrap-navbar-with-logo-centered-above-Dihnl */
 header[role="banner"] #logo-main {

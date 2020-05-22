@@ -29,8 +29,9 @@ $gifts = searchQuery($searchText, $db);
       echo "<li  class='idealist'><a href='ideaDetails.php?id={$row['id']}' <strong>" . $row['gift_name'] . '</strong></a></li>';
       }
       ?>
+      <li><a href="gift.php" class="btn btn-info bottombtn">Return to Search</a> </li>
     </ul>
-    <a href="gift.php" class="btn btn-info bottombtn">Return to Search</a>   
+      
     </div>
     <div class="col-sm-4"></div>
 
