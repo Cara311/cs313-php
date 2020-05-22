@@ -18,15 +18,22 @@ $gifts = searchQuery($searchText, $db);
 
 <div class="container">
 <h1 class="giftIdeas">Gift Ideas</h1>
-<ul>
-<?php  
-foreach ($gifts as $row)
-{
-  echo "<li  class='idealist'><a href='ideaDetails.php?id={$row['id']}' <strong>" . $row['gift_name'] . '</strong></a></li>';
-}
-?>
-</ul>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+    <ul>
+      <?php  
+      foreach ($gifts as $row)
+      {
+      echo "<li  class='idealist'><a href='ideaDetails.php?id={$row['id']}' <strong>" . $row['gift_name'] . '</strong></a></li>';
+      }
+      ?>
+    </ul>
     <a href="gift.php" class="btn btn-info bottombtn">Return to Search</a>   
+    </div>
+    <div class="col-sm-4"></div>
+
 </div>
 
 
