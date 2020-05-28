@@ -34,11 +34,13 @@ switch ($action) {
     exit;
    }
    break;
+
+   case 'viewlist':
+    include "../view/listview.php";
+    break;
 }
 
-    case 'viewlist':
-        include "../view/listview.php";
-        break;
+    
 
 
 ?>
