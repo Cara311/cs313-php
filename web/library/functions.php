@@ -36,11 +36,86 @@ function displayQuery($id, $db) {
         return $results;
     }    
 
+    //Function handles site registrations
+function regUser($clientFirstname, $clientLastname, $clientEmail, $clientPassword){
+ 
+ // Create a connection object using the connection function
+ $db = db_connect();
+ 
+ // The SQL statement
+ $sql = 'INSERT INTO users (clientFirstname, clientLastname,clientEmail, clientPassword, clientLevel)
+     VALUES (:clientFirstname, :clientLastname, :clientEmail, :clientPassword, :clientLevel)';
+ 
+ // Create the prepared statement using the connection
+ $stmt = $db->prepare($sql);
+ 
+ $stmt->bindValue(':clientFirstname', $clientFirstname, PDO::PARAM_STR);
+ $stmt->bindValue(':clientLastname', $clientLastname, PDO::PARAM_STR);
+ $stmt->bindValue(':clientEmail', $clientEmail, PDO::PARAM_STR);
+ $stmt->bindValue(':clientPassword', $clientPassword, PDO::PARAM_STR);
+ $stmt->bindValue(':clientLevel', $clientLevel, PDO::PARAM_INT);
+ 
+ // Insert the data
+ $stmt->execute();
+ 
+ // Ask how many rows changed as a result of our insert
+ $rowsChanged = $stmt->rowCount();
+ 
+ // Close the database interaction
+ $stmt->closeCursor();
+ 
+ // Return the rows changed
+ return $rowsChanged;
+}
+
+// Check for an existing email address
+function checkExistingEmail($clientEmail) {
+    $db = acmeConnect();
+    $sql = 'SELECT clientEmail FROM users WHERE clientEmail = :email';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':email', $clientEmail, PDO::PARAM_STR);
+    $stmt->execute();
+    $matchEmail = $stmt->fetch(PDO::FETCH_NUM);
+    $stmt->closeCursor();
+    if(empty($matchEmail)){
+     return 0;
+    } else {
+     return 1;
+    }
+   }
+
+    // Function checks email to ensure the email is valid.
+function checkEmail($clientEmail){
+    $valEmail = filter_var($clientEmail, FILTER_VALIDATE_EMAIL);
+    return $valEmail;
+   }
+   
+   // Check the password for a minimum of 8 characters,
+    // at least one 1 capital letter, at least 1 number and
+    // at least 1 special character
+   function checkPassword($clientPassword){
+    $pattern = '/^(?=.*[[:digit:]])(?=.*[[:punct:]])(?=.*[A-Z])(?=.*[a-z])([^\s]){8,}$/';
+    return preg_match($pattern, $clientPassword);
+   }
+
+
+   // Get client data based on an email address
+function getClient($clientEmail){
+    $db = db_connect();
+    $sql = 'SELECT clientId, clientFirstname, clientLastname, clientEmail, clientLevel, clientPassword 
+            FROM users
+            WHERE clientEmail = :email';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':email', $clientEmail, PDO::PARAM_STR);
+    $stmt->execute();
+    $clientData = $stmt->fetch(PDO::FETCH_ASSOC);
+    $stmt->closeCursor();
+    return $clientData;
+   }
+
 //function to check if email is valid
 
 //function to build detailed product display
-
-
 
 //function to build list of interests options
 
