@@ -45,7 +45,7 @@ WHERE interests.id = 2;
 INSERT INTO users (clientFirstname, clientLastname, clientEmail, clientPassword, clientLevel) VALUES ('Admin', 'User', 'admin@codeotter.com', 'AdminUser-1', 1);
 
 --Insert Admin Ideas
-INSERT INTO ideas (gift_id, user_id) VALUES (12, 1);
+INSERT INTO ideas (gift_id, user_id) VALUES (12, 22);
 
 --Insert Interests
 INSERT INTO interests (interest) VALUES ('fashion'); --1
