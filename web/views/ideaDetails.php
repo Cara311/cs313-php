@@ -53,7 +53,7 @@ foreach ($idea as $row)
     echo "<input type='submit' name='submit' class='btn btn-info' value='Add to Ideas'>";
     echo "<br>";
     echo "<br>";
-    echo "<a href='listview.php' class='btn btn-info'>View Idea List</a>";
+    echo "<a href='../ideas/index.php?action=viewlist' class='btn btn-info'>View Idea List</a>";
     echo "</div>";
     }
     echo "<a href='gift.php' class='btn btn-info'>Go Back to Idea Search</a>";

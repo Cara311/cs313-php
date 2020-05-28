@@ -36,5 +36,9 @@ switch ($action) {
    break;
 }
 
+    case 'viewlist':
+        include "../view/listview.php";
+        break;
+
 
 ?>
