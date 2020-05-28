@@ -41,8 +41,7 @@ function displayQuery($id, $db) {
     //Function handles site registrations
 function regUser($clientFirstname, $clientLastname, $clientEmail, $clientLevel, $clientPassword){
  
- // Create a connection object using the connection function
- $db = db_connect();
+ 
  
  // The SQL statement
  $sql = 'INSERT INTO users (clientFirstname, clientLastname,clientEmail, clientLevel, clientPassword )
