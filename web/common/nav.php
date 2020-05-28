@@ -25,6 +25,12 @@
           </ul>
         </li>
         <li><a href="../views/otters.php">Otters</a></li>
+        <?php if(isset($_SESSION['loggedin'])){ ?>
+          <li><a href='../accounts/index.php?action=logout' title='Click to logout'>Log Out</a></li>
+          <?php } else { ?>
+          <li><a href='../accounts/index.php?action=login' title='Click to register or login'>My Account</a> </li>
+          <?php }?>
+        <li><a href="../views/otters.php">Otters</a></li>
       </ul>
     </div>
   </div>
