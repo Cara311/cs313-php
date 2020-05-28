@@ -94,14 +94,12 @@ switch ($action) {
   $clientEmail = checkEmail($clientEmail);
  
   $checkPassword = checkPassword($clientPassword);
- echo $checkPassword;
 
   //Check for exsisting email address
-  /*$existingEmail = checkExistingEmail($clientEmail); */
+  $existingEmail = checkExistingEmail($clientEmail); 
+  echo $existingEmail;
 
-  
-
-  /* // Check for existing email address in the table
+   // Check for existing email address in the table
   if($existingEmail){
    $_SESSION['message'] = '<p class="notice">That email address already exists. Do you want to login instead?</p>';
    include '../views/login.php';
@@ -116,6 +114,7 @@ switch ($action) {
     exit; 
   }
 
+  /*
   // Hash the checked password
   $hashedPassword = password_hash($clientPassword, PASSWORD_DEFAULT);
   // Send the data to the model

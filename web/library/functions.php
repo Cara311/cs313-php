@@ -73,7 +73,7 @@ function regUser($clientFirstname, $clientLastname, $clientEmail, $clientLevel, 
 
 // Check for an existing email address
 function checkExistingEmail($clientEmail) {
-    $db = acmeConnect();
+    $db = db_connect();
     $sql = 'SELECT clientEmail FROM users WHERE clientEmail = :email';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':email', $clientEmail, PDO::PARAM_STR);
