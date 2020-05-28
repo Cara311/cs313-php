@@ -38,6 +38,7 @@ switch ($action) {
 
  // Query the client data based on the email address
  $clientData = getClient($clientEmail);
+ print_r($clientData);
  // Compare the password just submitted against
  // the hashed password for the matching client
  $hashCheck = password_verify($clientPassword, $clientData['clientPassword']);
@@ -45,7 +46,7 @@ switch ($action) {
  // and return to the login view
  if(!$hashCheck) {
    $_SESSION['message'] = '<p class="notice">Please check your password and try again.</p>';
-   include '../view/login.php';
+   include '../views/login.php';
    exit;
  } 
  // A valid user exists, log them in
