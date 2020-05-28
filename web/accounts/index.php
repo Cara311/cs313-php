@@ -92,11 +92,12 @@ switch ($action) {
 
   //Reset clientEmail so that it's the validated email.
   $clientEmail = checkEmail($clientEmail);
-  echo $clientEmail;
- /* $checkPassword = checkPassword($clientPassword);
+ 
+  $checkPassword = checkPassword($clientPassword);
+ echo $checkPassword;
 
   //Check for exsisting email address
-  $existingEmail = checkExistingEmail($clientEmail); */
+  /*$existingEmail = checkExistingEmail($clientEmail); */
 
   
 
