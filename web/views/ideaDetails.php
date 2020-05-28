@@ -42,7 +42,7 @@ foreach ($idea as $row)
     if(isset($_SESSION['loggedin'])){
     echo " <a href='../accounts/index.php?action=addtolist' class='btn btn-info' id='{$row[id]}'>'Save to Idea List'</a><br>";
     echo "<br>";
-    echo "<a href='list.php' class='btn btn-info'>View Idea List</a>";
+    echo "<a href='listview.php' class='btn btn-info'>View Idea List</a>";
     echo "</div>";
     }
     echo "<a href='gift.php' class='btn btn-info'>Go Back to Idea Search</a>";

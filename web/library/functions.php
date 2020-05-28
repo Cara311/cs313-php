@@ -36,7 +36,18 @@ function displayQuery($id, $db) {
         $statement = $db->query('SELECT interest FROM interests');
         $results = $statement->fetchAll(PDO::FETCH_ASSOC);
         return $results;
-    }    
+    }   
+    
+    //Display gifts user has saved
+    function listideas($id, $db) {
+        $stmt = $db->prepare('SELECT g.id, g.gift_name FROM gifts AS g JOIN ideas i ON i.gift_id = g.id WHERE i.user_id = :id');
+        $stmt->bindValue(':id', $id, PDO::PARAM_STR);
+        $stmt->execute();
+        $list = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $list;
+    }
+
+
 
     //Function handles site registrations
 function regUser($clientFirstname, $clientLastname, $clientEmail, $clientLevel, $clientPassword){

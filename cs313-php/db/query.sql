@@ -44,6 +44,9 @@ WHERE interests.id = 2;
 --Insert Admin User
 INSERT INTO users (clientFirstname, clientLastname, clientEmail, clientPassword, clientLevel) VALUES ('Admin', 'User', 'admin@codeotter.com', 'AdminUser-1', 1);
 
+--Insert Admin Ideas
+INSERT INTO ideas (gift_id, user_id) VALUES (12, 1);
+
 --Insert Interests
 INSERT INTO interests (interest) VALUES ('fashion'); --1
 INSERT INTO interests (interest) VALUES ('outdoors');--2
@@ -78,11 +81,6 @@ INSERT INTO gifts (gift_name, price, description, image_name, interests_id) VALU
 INSERT INTO gifts (gift_name, price, description, image_name, interests_id) VALUES ('Inflatable Kayak', 250, 'Roll up this kayak to take it anywhere then inflate it', 'kayak.jpg', 2);
 
 
-
-
-
-
-
 --Query by Interest
 SELECT * FROM gifts AS g
 JOIN interests AS i
@@ -90,3 +88,7 @@ ON g.interests_id = i.id
 WHERE i.interest = 'fashion';
 
 --Query to bring up product
+
+--Query to bring up user's saved ideas
+SELECT g.id, g.gift_name FROM gifts AS g JOIN ideas i ON i.gift_id = g.id WHERE i.user_id = 1;
+
