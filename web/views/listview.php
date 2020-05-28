@@ -57,7 +57,7 @@ $db = db_connect(); */
                             
                         </tbody>
                     </table>
-                    <a href='gift.php' class='btn btn-info'>Go Back to Idea Search</a>
+                    <a href='../ideas/index.php?action=search' class='btn btn-info'>Go Back to Idea Search</a>
                 </div>
                 </div>
             </div>

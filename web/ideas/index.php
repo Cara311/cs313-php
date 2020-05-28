@@ -38,6 +38,10 @@ switch ($action) {
    case 'viewlist':
     include "../views/listview.php";
     break;
+
+    case 'search':
+        include "../views/gift.php";
+        break;
 }
 
     
