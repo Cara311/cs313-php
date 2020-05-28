@@ -90,9 +90,10 @@ switch ($action) {
   $clientLevel = filter_input(INPUT_POST, 'clientLevel', FILTER_SANITIZE_NUMBER_INT);
   echo $clientLastname;
 
- /*  //Reset clientEmail so that it's the validated email.
+  //Reset clientEmail so that it's the validated email.
   $clientEmail = checkEmail($clientEmail);
-  $checkPassword = checkPassword($clientPassword);
+  echo $clientEmail;
+ /* $checkPassword = checkPassword($clientPassword);
 
   //Check for exsisting email address
   $existingEmail = checkExistingEmail($clientEmail); */
