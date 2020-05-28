@@ -14,6 +14,7 @@ if ($action == NULL) {
  $action = filter_input(INPUT_GET, 'action');
 }
 
+echo $action;
 
 switch ($action) {
 
@@ -79,7 +80,7 @@ switch ($action) {
           
  break; */
  
- case 'register':
+ case "register":
 
     echo "It Works";
  /*  // Filter and store the data
@@ -129,9 +130,7 @@ switch ($action) {
   }
 
     break;
- } */
+ */
 
-
-
+}
 ?>
-
