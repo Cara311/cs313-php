@@ -1,4 +1,6 @@
-<?php include '../common/header.php';?>
+<?php include '../common/header.php';
+print_r($_SESSION);
+?>
 
 <main>
 
