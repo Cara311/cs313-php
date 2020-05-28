@@ -1,8 +1,8 @@
 <?php include '../common/header.php'; ?>
 
  <?php 
-ini_set('display_errors',1); 
-error_reporting(E_ALL);
+//ini_set('display_errors',1); 
+//error_reporting(E_ALL);
 
 //Get the database info 
 require_once '../library/connections.php';
@@ -26,7 +26,7 @@ require_once '../library/functions.php';
   <input type="hidden" name="action" value="login_user">
  
   <label for="clientEmail">Email:*</label><br>
-  <input type="email" name="clientEmail" title="something@email.com" id="clientEmail" value="email" required><br>
+  <input type="email" name="clientEmail" title="something@email.com" id="clientEmail" value="<?php echo (isset($clientEmail) ? $clientEmail : ' ');  ?>" required><br>
   
   <label for="clientPassword">Password:*</label><br>
   <span class="password">Passwords must be at least 8 characters and contain at least 1 number, 1 capital letter and 1 special character</span><br> 

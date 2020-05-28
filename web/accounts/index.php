@@ -21,7 +21,7 @@ if ($action == NULL) {
 switch ($action) {
 
  
- /* case 'login_user':
+ case 'login_user':
   $clientEmail = filter_input(INPUT_POST, 'clientEmail', FILTER_SANITIZE_EMAIL);
   $clientPassword = filter_input(INPUT_POST, 'clientPassword', FILTER_SANITIZE_STRING);
 
@@ -80,7 +80,7 @@ switch ($action) {
   
  exit;
           
- break; */
+ break;
  
  case "register":
 
