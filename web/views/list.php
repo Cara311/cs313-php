@@ -1,5 +1,6 @@
 <?php include '../common/header.php'; ?>
 
+session_start();
 
 <main>
 
