@@ -51,9 +51,10 @@ $db = db_connect(); */
                                 {
                                 echo "<td>" . $row['gift_name'] . "</td>";
                                 echo "<td>" . "<a href='../ideas/index.php?action=delete' class= 'btn btn-info'>Remove</a>" . "</td>";
+                                echo "</tr>";
                                 }
                             ?>
-                            </tr>
+                            
                         </tbody>
                     </table>
                     <a href='gift.php' class='btn btn-info'>Go Back to Idea Search</a>
