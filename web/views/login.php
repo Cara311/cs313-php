@@ -1,12 +1,11 @@
 <?php include '../common/header.php'; ?>
  <?php 
-/* session_start();
+ session_start();
 //Get the database info 
 require "../library/connections.php";
 require "../library/functions.php";
-require "../accounts/index.php";
 
-$db = db_connect(); */
+$db = db_connect(); 
 
 ?> 
 
@@ -14,10 +13,10 @@ $db = db_connect(); */
 <main>
     <h1 class="giftIdeas">Sign In to Your Account</h1>
    <?php
-   /* if (isset($_SESSION['message'])) {
+   if (isset($_SESSION['message'])) {
       echo $_SESSION['message'];
     //unset session message
-    unset($_SESSION['message']); */
+    unset($_SESSION['message']); 
    } ?> 
     <hr>
 
