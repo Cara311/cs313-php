@@ -52,6 +52,7 @@ foreach ($idea as $row)
     echo "<input type='hidden' name='gift_id' value='{$row[id]}'>";
     echo "<input type='submit' name='submit' class='btn btn-info' value='Add to Ideas'>";
     echo "<br>";
+    echo "<br>";
     echo "<a href='listview.php' class='btn btn-info'>View Idea List</a>";
     echo "</div>";
     }
