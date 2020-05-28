@@ -69,15 +69,15 @@ switch ($action) {
 }
  
   //Save client info to variable
-  $clientFirstname = $_SESSION['clientData']['clientFirstname'];
-  $clientLastname = $_SESSION['clientData']['clientLastname'];
-  $clientEmailadd = $_SESSION['clientData']['clientEmail'];
-  $clientLevel = $_SESSION['clientData']['clientLevel'];
+  $clientFirstname = $_SESSION['clientData']['clientfirstname'];
+  $clientLastname = $_SESSION['clientData']['clientlastname'];
+  $clientEmailadd = $_SESSION['clientData']['clientemail'];
+  $clientLevel = $_SESSION['clientData']['clientlevel'];
   $clientId = $_SESSION['clientData']['id'];
  
   
  // Send them to the user view
- include '../view/list.php';
+ include '../views/list.php';
   
  exit;
           
