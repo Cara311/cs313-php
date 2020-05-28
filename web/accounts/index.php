@@ -1,11 +1,12 @@
 <?php 
 
-  // Access Session
-  session_start();
+// Access Session
+//session_start();
 
 require_once '../library/connections.php';
 require_once '../library/functions.php';
-$db = db_connect();
+//$db = db_connect();
+
 
 
   
