@@ -118,6 +118,8 @@ switch ($action) {
   // Send the data to the model
   $regOutcome = regUser($clientFirstname, $clientLastname, $clientEmail, $clientLevel, $hashedPassword);
 
+  echo $regOutcome;
+
   // Check and report the result
   if($regOutcome === 1){
     setcookie('firstname', $clientFirstname, strtotime('+1 year'), '/');
