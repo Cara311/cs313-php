@@ -57,8 +57,8 @@ if(isset($_POST['clientFirstname'])) {
         <div class="row">
             <div class="col-sm-3"></div>
             <div class="col-sm-6"> 
-            <?php if(!isset($_SESSION['clientFirstname'])) { echo "<a href='account.php'><h3 id='account'> Sign Up For Account <?php </h3></a>";} ?>
-            <?php if(isset($_SESSION['clientFirstname'])) { echo "<a href='#'><h3 id='account'> Log Out of Account </h3></a>"; } ?>
+            <?php if(!isset($_SESSION['clientData']['clientfirstname'])) { echo "<a href='account.php'><h3 id='account' class='btn btn-info'> Sign Up For Account <?php </h3></a>";} ?>
+            <?php if(isset($_SESSION['clientData']['clientfirstname'])) { echo "<a href='../accounts/index.php?action=logout' title='Click to logout' class='btn btn-info'>Log Out</a>"; } ?>
             </div>
             <div class="col-sm-3"></div>
         </div>
