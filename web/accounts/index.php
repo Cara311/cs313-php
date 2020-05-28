@@ -88,8 +88,7 @@ switch ($action) {
   $clientEmail = filter_input(INPUT_POST, 'clientEmail', FILTER_SANITIZE_EMAIL);
   $clientPassword = filter_input(INPUT_POST, 'clientPassword', FILTER_SANITIZE_STRING);
   $clientLevel = filter_input(INPUT_POST, 'clientLevel', FILTER_SANITIZE_NUMBER_INT);
-  echo $clientLastname;
-
+ 
   //Reset clientEmail so that it's the validated email.
   $clientEmail = checkEmail($clientEmail);
  
@@ -97,7 +96,6 @@ switch ($action) {
 
   //Check for exsisting email address
   $existingEmail = checkExistingEmail($clientEmail); 
-  echo $existingEmail;
 
    // Check for existing email address in the table
   if($existingEmail){
@@ -106,6 +104,7 @@ switch ($action) {
    exit;
   }
 
+  /*
   // Check for missing data
   if(empty($clientFirstname) || empty($clientLastname) || empty($clientEmail) || empty($checkPassword))
    {
@@ -114,7 +113,7 @@ switch ($action) {
     exit; 
   }
 
-  /*
+  
   // Hash the checked password
   $hashedPassword = password_hash($clientPassword, PASSWORD_DEFAULT);
   // Send the data to the model
