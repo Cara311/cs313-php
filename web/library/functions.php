@@ -154,7 +154,7 @@ function getClient($clientEmail){
 
    //Delete Idea From List
    function deleteProduct($ideaid) {
-    $db = acmeConnect();
+    $db = db_connect();
     $sql = 'DELETE FROM ideas WHERE ideas_id = :ideaid';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':ideaid', $ideaid, PDO::PARAM_INT);
