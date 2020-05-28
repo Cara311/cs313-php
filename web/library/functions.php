@@ -42,7 +42,7 @@ function displayQuery($id, $db) {
 function regUser($clientFirstname, $clientLastname, $clientEmail, $clientLevel, $clientPassword){
  
  // Create a connection object using the connection function
- $db = db_connect();
+ //$db = db_connect();
  
  // The SQL statement
  $sql = 'INSERT INTO users (clientFirstname, clientLastname,clientEmail, clientLevel, clientPassword )
@@ -73,7 +73,7 @@ function regUser($clientFirstname, $clientLastname, $clientEmail, $clientLevel, 
 
 // Check for an existing email address
 function checkExistingEmail($clientEmail) {
-    $db = db_connect();
+    //$db = db_connect();
     $sql = 'SELECT clientEmail FROM users WHERE clientEmail = :email';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':email', $clientEmail, PDO::PARAM_STR);
@@ -104,7 +104,7 @@ function checkEmail($clientEmail){
 
    // Get client data based on an email address
 function getClient($clientEmail){
-    $db = db_connect();
+    //$db = db_connect();
     $sql = 'SELECT clientId, clientFirstname, clientLastname, clientEmail, clientLevel, clientPassword 
             FROM users
             WHERE clientEmail = :email';
