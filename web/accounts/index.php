@@ -88,15 +88,16 @@ switch ($action) {
   $clientEmail = filter_input(INPUT_POST, 'clientEmail', FILTER_SANITIZE_EMAIL);
   $clientPassword = filter_input(INPUT_POST, 'clientPassword', FILTER_SANITIZE_STRING);
   $clientLevel = filter_input(INPUT_POST, 'clientLevel', FILTER_SANITIZE_NUMBER_INT);
+  echo $clientLastname;
 
-  //Reset clientEmail so that it's the validated email.
+ /*  //Reset clientEmail so that it's the validated email.
   $clientEmail = checkEmail($clientEmail);
   $checkPassword = checkPassword($clientPassword);
 
   //Check for exsisting email address
-  $existingEmail = checkExistingEmail($clientEmail);
+  $existingEmail = checkExistingEmail($clientEmail); */
 
-  echo $clientLastname;
+  
 
   /* // Check for existing email address in the table
   if($existingEmail){
