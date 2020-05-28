@@ -25,11 +25,11 @@ switch ($action) {
      // Check and report the result
   if ($prodOutcome === 1) {
     $_SESSION['message'] = '<p class="error">A new idea has been added to your list.</p>';
-    include '../views/list.php';
+    include '../views/listview.php';
     exit;
    } else {
     $_SESSION['message'] = '<p class="error">Sorry, we were unable to add a new idea. Please try again.</p>';
-    include '../views/list.php';
+    include '../views/listview.php';
     exit;
    }
    break;

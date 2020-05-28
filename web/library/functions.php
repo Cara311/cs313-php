@@ -39,7 +39,8 @@ function displayQuery($id, $db) {
     }   
     
     //Display gifts user has saved
-    function listideas($id, $db) {
+    function listideas($id) {
+        $db = db_connect();
         $stmt = $db->prepare('SELECT g.id, g.gift_name FROM gifts AS g JOIN ideas i ON i.gift_id = g.id WHERE i.user_id = :id');
         $stmt->bindValue(':id', $id, PDO::PARAM_STR);
         $stmt->execute();

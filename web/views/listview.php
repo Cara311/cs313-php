@@ -1,14 +1,14 @@
 <?php include '../common/header.php';
-session_start();
+/* session_start();
 require "../library/connections.php";
 require "../library/functions.php";
-$db = db_connect();
+$db = db_connect(); */
  
      // If the  user id set search for gifts associated with that id
  if(isset($_SESSION['clientData']['id'])) {
      $id = $_SESSION['clientData']['id'];
      // Now run the query to find the text in the database, and then save the results as a variable
-     $idealist = listideas($id, $db);
+     $idealist = listideas($id);
    }
 ?>
 <nav>
@@ -23,6 +23,12 @@ $db = db_connect();
     ?>
 </nav>
 <main>
+    <?php
+     if (isset($_SESSION['message'])) {
+        echo $_SESSION['message'];
+      //unset session message
+      unset($_SESSION['message']); 
+     } ?>
     <h1 class="giftIdeas">Saved Gift Ideas</h1>
     <hr>
     <div class="container">
