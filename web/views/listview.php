@@ -30,15 +30,29 @@ $db = db_connect();
             <div class='col-sm-4'>
                 <div class='card'>
                 <div class='card-body'>
-<?php  
-foreach ($idealist as $row)
-{
-    echo "<h4 class='card-title'>" . $row['gift_name'] . "</h4>";
-}
-?>
-<a href='gift.php' class='btn btn-info'>Go Back to Idea Search</a>
-</div>
-        </div>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                            <th>Gift Ideas</th>
+                            <th>Remove Gift</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <?php  
+                                foreach ($idealist as $row)
+                                {
+                                echo "<td>" . $row['gift_name'] . "</td>";
+                                echo "<td>" . "<a href='../ideas/index.php?action=delete' class= 'btn btn-info'>Remove</a>" . "</td>";
+                                }
+                            ?>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href='gift.php' class='btn btn-info'>Go Back to Idea Search</a>
+                </div>
+                </div>
+            </div>
         <div class="col-sm-4"></div>
     </div>
 
