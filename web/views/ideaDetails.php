@@ -1,6 +1,6 @@
 <?php include '../common/header.php'; ?>
 <?php
-//session_start();
+session_start();
 
 //Get the database info 
 require "../library/connections.php";
