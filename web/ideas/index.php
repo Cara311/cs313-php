@@ -42,6 +42,10 @@ switch ($action) {
     case 'search':
         include "../views/gift.php";
         break;
+
+    case 'delete':
+
+                 
 }
 
     

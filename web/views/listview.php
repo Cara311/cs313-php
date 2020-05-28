@@ -9,6 +9,7 @@ $db = db_connect(); */
      $id = $_SESSION['clientData']['id'];
      // Now run the query to find the text in the database, and then save the results as a variable
      $idealist = listideas($id);
+     print_r($idealist);
    }
 ?>
 <nav>
@@ -50,7 +51,12 @@ $db = db_connect(); */
                                 foreach ($idealist as $row)
                                 {
                                 echo "<td>" . $row['gift_name'] . "</td>";
-                                echo "<td>" . "<a href='../ideas/index.php?action=delete' class= 'btn btn-info'>Remove</a>" . "</td>";
+                                echo "<form action='../ideas/index.php' method='POST'>";
+                                echo "<input type='hidden' name='action' value='delete'>";
+                                echo "<input type='hidden' name='gift_id' value='{$row[gift_id]}'>";
+                                echo "<input type='hidden' name='gift_id' value='{$row[gift_name]}'>";
+                                echo "<td>" . "<input type='submit' name='submit' class='btn btn-info' value='X'>" . "</td>";
+                                echo "</form>";
                                 echo "</tr>";
                                 }
                             ?>
