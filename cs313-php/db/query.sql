@@ -24,12 +24,14 @@ CREATE TABLE gifts (
   );
 
   CREATE TABLE ideas (
-    id SERIAL PRIMARY KEY,
+    ideas_id SERIAL PRIMARY KEY,
     gift_id INT NOT NULL REFERENCES gifts(id), 
     user_id INT NOT NULL REFERENCES users(id)
   );
 
   --ALTER
+  ALTER TABLE ideas
+RENAME COLUMN id TO ideas_id;
   --ALTER TABLE gifts
 --ADD COLUMN description VARCHAR(255) NOT NULL;
 
@@ -90,5 +92,5 @@ WHERE i.interest = 'fashion';
 --Query to bring up product
 
 --Query to bring up user's saved ideas
-SELECT g.id, g.gift_name FROM gifts AS g JOIN ideas i ON i.gift_id = g.id WHERE i.user_id = 1;
+SELECT g.id, g.gift_name, i.ideas_id FROM gifts AS g JOIN ideas i ON i.gift_id = g.id WHERE i.user_id = 22;
 

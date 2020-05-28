@@ -44,17 +44,17 @@ switch ($action) {
         break;
 
     case 'delete':
-        $invName = filter_input(INPUT_POST, 'invName', FILTER_SANITIZE_STRING);
-        $invId = filter_input(INPUT_POST, 'invId', FILTER_SANITIZE_NUMBER_INT);
+        $giftname = filter_input(INPUT_POST, 'giftname', FILTER_SANITIZE_STRING);
+        $ideaid = filter_input(INPUT_POST, 'ideaid', FILTER_SANITIZE_NUMBER_INT);
       
-        $deleteResult = deleteProduct($invId);
+        $deleteResult = deleteProduct($ideaid);
         if ($deleteResult) {
-         $_SESSION['message'] = "<p class='error'>Congratulations, $invName was successfully deleted.</p>";
-         header('location: /acme/products/');
+         $_SESSION['message'] = "<p class='error'>Congratulations, $giftname was successfully deleted.</p>";
+         header('location: ../views/listview.php');
          exit;
         } else {
-         $_SESSION['message'] = "<p class='error'>Error: $invName was not deleted.</p>";
-         header('location: /acme/products/');
+         $_SESSION['message'] = "<p class='error'>Error: $giftname was not deleted.</p>";
+         header('location: ../views/listview.php');
          exit;
         }
         break;
