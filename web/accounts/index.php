@@ -121,10 +121,11 @@ switch ($action) {
 
   // Check and report the result
   if($regOutcome === 1){
+      echo "this is working";
     //setcookie('firstname', $clientFirstname, strtotime('+1 year'), '/');
    //$_SESSION['message'] = "<p class='error'>Thanks for registering $clientFirstname. Please use your email and password to login.</p>";
-    include '../views/login.php';
-    exit;
+    //include '../views/login.php';
+   // exit;
   } else {
     $_SESSION['message'] = '<p class="error">Sorry $clientFirstname, but the registration failed. Please try again.</p>';
     include '../views/account.php';

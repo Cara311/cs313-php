@@ -4,6 +4,7 @@ session_start();
 //Get the database info 
 require "../library/connections.php";
 require "../library/functions.php";
+
 $db = db_connect();
 
 ?>
