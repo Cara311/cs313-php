@@ -2,7 +2,7 @@
 
   // Access Session
   session_start();
-  
+
 require_once '../library/connections.php';
 require_once '../library/functions.php';
 $db = db_connect();
@@ -14,10 +14,12 @@ if ($action == NULL) {
  $action = filter_input(INPUT_GET, 'action');
 }
 
+echo $action;
+
 switch ($action) {
 
  
- case 'login_user':
+ /* case 'login_user':
   $clientEmail = filter_input(INPUT_POST, 'clientEmail', FILTER_SANITIZE_EMAIL);
   $clientPassword = filter_input(INPUT_POST, 'clientPassword', FILTER_SANITIZE_STRING);
 
@@ -76,7 +78,7 @@ switch ($action) {
   
  exit;
           
- break;
+ break; */
  
  case 'register':
   // Filter and store the data
