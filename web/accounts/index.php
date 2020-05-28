@@ -20,6 +20,9 @@ if ($action == NULL) {
 
 switch ($action) {
 
+case 'login':
+    include "../views/login.php";
+    break;
  
  case 'login_user':
   $clientEmail = filter_input(INPUT_POST, 'clientEmail', FILTER_SANITIZE_EMAIL);
@@ -136,6 +139,12 @@ switch ($action) {
   }
  
     break; 
+
+case 'logout':
+    // Destroy the session.
+        session_destroy();
+        header('Location: ../gift.php');
+        break;
 }
 
 ?>
