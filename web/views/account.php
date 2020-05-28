@@ -58,7 +58,8 @@ $db = db_connect();
                         <button type='submit' class='btn btn-info' value="register">Sign Up</button>
                         </div>
                     </form>
-                </div>    
+                </div>
+                <a href="login.php" class= 'btn btn-info'>Login</a>  
             </div>
         </div>   
         <div class="col-sm-4"></div>

@@ -39,7 +39,7 @@ require_once '../library/functions.php';
                             <span class="password">Passwords must be at least 8 characters and contain at least 1 number, 1 capital letter and 1 special character</span><br> 
                             <input type="password" name="clientPassword" id="clientPassword" required pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required><br>
                         </div>
-                         <input type="submit" name="submit" id="logbttn"  class="button" value="Login">
+                         <input type="submit" name="submit" id="logbttn"  class="btn btn-info" value="Login">
   
                         </form>
                     </div>
