@@ -15,7 +15,6 @@ if ($action == NULL) {
 }
 
 
-
 switch ($action) {
 
  
@@ -122,10 +121,9 @@ switch ($action) {
 
   // Check and report the result
   if($regOutcome === 1){
-    setcookie('firstname', $clientFirstname, strtotime('+1 year'), '/');
-   $_SESSION['message'] = "<p class='error'>Thanks for registering $clientFirstname. Please use your email and password to login.</p>";
-    //include '../views/login.php';
-    header('../views/login.php');
+    //setcookie('firstname', $clientFirstname, strtotime('+1 year'), '/');
+   //$_SESSION['message'] = "<p class='error'>Thanks for registering $clientFirstname. Please use your email and password to login.</p>";
+    include '../views/login.php';
     exit;
   } else {
     $_SESSION['message'] = '<p class="error">Sorry $clientFirstname, but the registration failed. Please try again.</p>';
