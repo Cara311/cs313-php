@@ -1,7 +1,7 @@
 <?php 
 
 // Access Session
-//session_start();
+session_start();
 
 require_once '../library/connections.php';
 require_once '../library/functions.php';
