@@ -36,7 +36,7 @@ switch ($action) {
    break;
 
    case 'viewlist':
-    include "../view/listview.php";
+    include "../views/listview.php";
     break;
 }
 
