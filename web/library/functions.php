@@ -1,4 +1,6 @@
 <?php
+require_once 'connections.php';
+$db = db_connect();
 
 //Check for valid input
 function validateInput($data){
