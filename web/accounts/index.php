@@ -143,7 +143,7 @@ case 'login':
 case 'logout':
     // Destroy the session.
         session_destroy();
-        header('Location: ../gift.php');
+        header('Location: ../views/gift.php');
         break;
 }
 
