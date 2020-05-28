@@ -14,7 +14,7 @@ if ($action == NULL) {
  $action = filter_input(INPUT_GET, 'action');
 }
 
-echo $action;
+
 
 switch ($action) {
 
@@ -82,8 +82,7 @@ switch ($action) {
  
  case "register":
 
-    echo "It Works";
- /*  // Filter and store the data
+  // Filter and store the data
   $clientFirstname = filter_input(INPUT_POST, 'clientFirstname', FILTER_SANITIZE_STRING);
   $clientLastname = filter_input(INPUT_POST, 'clientLastname', FILTER_SANITIZE_STRING);
   $clientEmail = filter_input(INPUT_POST, 'clientEmail', FILTER_SANITIZE_EMAIL);
@@ -97,7 +96,9 @@ switch ($action) {
   //Check for exsisting email address
   $existingEmail = checkExistingEmail($clientEmail);
 
-  // Check for existing email address in the table
+  echo $clientLastname;
+
+  /* // Check for existing email address in the table
   if($existingEmail){
    $_SESSION['message'] = '<p class="notice">That email address already exists. Do you want to login instead?</p>';
    include '../views/login.php';
@@ -128,9 +129,9 @@ switch ($action) {
     include '../views/account.php';
     exit;
   }
-
-    break;
  */
+    break;
+
 
 }
 ?>
