@@ -1,7 +1,9 @@
-<?php include '../common/header.php';
+<?php session_start(); 
+print_r($_SESSION);
 
-session_start();
 ?>
+
+<?php include '../common/header.php';?>
 
 <main>
 
