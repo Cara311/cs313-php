@@ -104,7 +104,6 @@ switch ($action) {
    exit;
   }
 
-  /*
   // Check for missing data
   if(empty($clientFirstname) || empty($clientLastname) || empty($clientEmail) || empty($checkPassword))
    {
@@ -130,7 +129,7 @@ switch ($action) {
     include '../views/account.php';
     exit;
   }
- */
+ 
     break;
 
 
