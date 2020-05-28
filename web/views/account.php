@@ -59,8 +59,9 @@ $db = db_connect();
                         </div>
                     </form>
                 </div>
-                <a href="login.php" class= 'btn btn-info'>Login</a>  
             </div>
+            <p>Already Have an Account?</p>
+            <a href="login.php" class= 'btn btn-info'>Login</a>  
         </div>   
         <div class="col-sm-4"></div>
         </div> 
