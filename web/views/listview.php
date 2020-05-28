@@ -42,7 +42,7 @@ $db = db_connect(); */
                         <thead>
                             <tr>
                             <th>Gift Ideas</th>
-                            <th>Remove Gift From List</th>
+                            <th>Remove Gift</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -53,8 +53,8 @@ $db = db_connect(); */
                                 echo "<td>" . $row['gift_name'] . "</td>";
                                 echo "<form action='../ideas/index.php' method='POST'>";
                                 echo "<input type='hidden' name='action' value='delete'>";
-                                echo "<input type='hidden' name='gift_id' value='{$row[gift_id]}'>";
-                                echo "<input type='hidden' name='gift_id' value='{$row[gift_name]}'>";
+                                echo "<input type='hidden' name='gift_id' value='{$row['id']}'>";
+                                echo "<input type='hidden' name='gift_id' value='{$row['gift_name']}'>";
                                 echo "<td>" . "<input type='submit' name='submit' class='btn btn-info' value='X'>" . "</td>";
                                 echo "</form>";
                                 echo "</tr>";
