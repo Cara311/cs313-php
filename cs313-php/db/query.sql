@@ -41,6 +41,9 @@ WHERE gifts.id = 2;
 DELETE FROM interests
 WHERE interests.id = 2;
 
+--Insert Admin User
+INSERT INTO users (clientFirstname, clientLastname, clientEmail, clientPassword, clientLevel) VALUES ('Admin', 'User', 'admin@codeotter.com', 'AdminUser-1', 1);
+
 --Insert Interests
 INSERT INTO interests (interest) VALUES ('fashion'); --1
 INSERT INTO interests (interest) VALUES ('outdoors');--2

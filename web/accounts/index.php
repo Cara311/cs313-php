@@ -1,12 +1,13 @@
 <?php 
 
-// Get the database connection file
-require_once '../library/connections.php';
-// Get the functions helper file
-require_once '../library/functions.php';
-
   // Access Session
   session_start();
+  
+require_once '../library/connections.php';
+require_once '../library/functions.php';
+$db = db_connect();
+
+
   
   $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL) {

@@ -23,6 +23,7 @@ $db = db_connect();
         <div class="col-sm-2"></div>
         <div class="col-sm-8">
             <form method='post' action='../accounts/index.php'>
+                <input type="hidden" name="action" value="register">
                 <label for="clientFirstname">First name:*</label><br>
                 <input type="text" name="clientFirstname" id="clientFirstname" <?php if(isset($clientFirstname)){echo "value='$clientFirstname'";}  ?> required><br>
  
@@ -39,7 +40,7 @@ $db = db_connect();
                 <input type="hidden" name="clientLevel" value="2">
 
                 <button type='submit' class='btn btn-info' value="register">Sign Up</button>
-                <input type="hidden" name="action" value="register">
+                
             </form>
         </div>
         <div class="col-sm-2"></div>
