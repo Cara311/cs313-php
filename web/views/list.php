@@ -1,12 +1,19 @@
 <?php include '../common/header.php';?>
 
 <main>
+<?php
+if (isset($_SESSION['message'])) {
+      echo $_SESSION['message'];
+    //unset session message
+    unset($_SESSION['message']); 
+   } 
 
-<?php if(isset($_SESSION['loggedin'])){ ?>
+     if(isset($_SESSION['loggedin'])){ ?>
             
             <div class="welcome"> Welcome <?php echo $_SESSION['clientData']['clientfirstname'] ?></div>
 
               <a href='../accounts/index.php?action=logout' title='Click to logout'>Log Out</a>
+              <a href='../views/listview.php'>View List</a>
              <?php } else { ?>
               <a href='../accounts/index.php?action=login' title='Click to register or login'>My Account</a> 
            <?php }

@@ -1,7 +1,6 @@
 <?php
 require_once '../library/connections.php';
 require_once '../library/functions.php';
-session_start();
 
 ini_set('display_errors',1); 
 error_reporting(E_ALL);
@@ -26,11 +25,11 @@ switch ($action) {
      // Check and report the result
   if ($prodOutcome === 1) {
     $_SESSION['message'] = '<p class="error">A new idea has been added to your list.</p>';
-    include '../views/ideaDetails.php';
+    include '../views/list.php';
     exit;
    } else {
     $_SESSION['message'] = '<p class="error">Sorry, we were unable to add a new idea. Please try again.</p>';
-    include '../views/ideaDetails.php';
+    include '../views/list.php';
     exit;
    }
    break;
