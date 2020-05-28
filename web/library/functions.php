@@ -39,14 +39,14 @@ function displayQuery($id, $db) {
     }    
 
     //Function handles site registrations
-function regUser($clientFirstname, $clientLastname, $clientEmail, $clientPassword){
+function regUser($clientFirstname, $clientLastname, $clientEmail, $clientLevel, $clientPassword){
  
  // Create a connection object using the connection function
  $db = db_connect();
  
  // The SQL statement
- $sql = 'INSERT INTO users (clientFirstname, clientLastname,clientEmail, clientPassword, clientLevel)
-     VALUES (:clientFirstname, :clientLastname, :clientEmail, :clientPassword, :clientLevel)';
+ $sql = 'INSERT INTO users (clientFirstname, clientLastname,clientEmail, clientLevel, clientPassword )
+     VALUES (:clientFirstname, :clientLastname, :clientEmail, :clientLevel, :clientPassword)';
  
  // Create the prepared statement using the connection
  $stmt = $db->prepare($sql);
@@ -54,8 +54,9 @@ function regUser($clientFirstname, $clientLastname, $clientEmail, $clientPasswor
  $stmt->bindValue(':clientFirstname', $clientFirstname, PDO::PARAM_STR);
  $stmt->bindValue(':clientLastname', $clientLastname, PDO::PARAM_STR);
  $stmt->bindValue(':clientEmail', $clientEmail, PDO::PARAM_STR);
- $stmt->bindValue(':clientPassword', $clientPassword, PDO::PARAM_STR);
  $stmt->bindValue(':clientLevel', $clientLevel, PDO::PARAM_INT);
+ $stmt->bindValue(':clientPassword', $clientPassword, PDO::PARAM_STR);
+ 
  
  // Insert the data
  $stmt->execute();

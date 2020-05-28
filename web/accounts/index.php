@@ -14,7 +14,6 @@ if ($action == NULL) {
  $action = filter_input(INPUT_GET, 'action');
 }
 
-echo $action;
 
 switch ($action) {
 
@@ -113,7 +112,7 @@ switch ($action) {
   // Hash the checked password
   $hashedPassword = password_hash($clientPassword, PASSWORD_DEFAULT);
   // Send the data to the model
-  $regOutcome = regUser($clientFirstname, $clientLastname, $clientEmail, $hashedPassword);
+  $regOutcome = regUser($clientFirstname, $clientLastname, $clientEmail, $clientLevel, $hashedPassword);
 
   // Check and report the result
   if($regOutcome === 1){
