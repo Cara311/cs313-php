@@ -127,6 +127,29 @@ function getClient($clientEmail){
     return $clientData;
    }
 
+
+   //Add gifts to idea list
+   function newIdea($giftId, $userId) {
+    $db = acmeConnect();
+    $sql = 'INSERT INTO ideas (gift_id, user_id)
+     VALUES (:giftId, :userId)';
+
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':giftId', $giftId, PDO::PARAM_STR); 
+    $stmt->bindValue(':userId', $userId, PDO::PARAM_STR); 
+
+    // Insert the data
+    $stmt->execute();
+ 
+    // Ask how many rows changed as a result of our insert
+    $rowsChanged = $stmt->rowCount();
+ 
+    // Close the database interaction
+    $stmt->closeCursor();
+ 
+    return $rowsChanged;
+   }
+
 //function to check if email is valid
 
 //function to build detailed product display

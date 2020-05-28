@@ -26,7 +26,12 @@ $db = db_connect();
 <div class="container">
     <div class="row">
         <div class="col-sm-4"></div>
-<?php  
+        <?php
+   if (isset($_SESSION['message'])) {
+      echo $_SESSION['message'];
+    //unset session message
+    unset($_SESSION['message']); 
+   } 
 
 foreach ($idea as $row)
 {
@@ -36,18 +41,23 @@ foreach ($idea as $row)
     echo "<img class='card-img-top' src='../images/{$row[image_name]}' alt='{$row[gift_name]}'>";
     echo "<div class='card-body'>";
     echo "<h4 class='card-title'>" . $row['gift_name'] . "</h4>";
+    echo "<form action='../ideas/index.php' method='POST'>";
+    echo "<input type='hidden' name='action' value='addtolist'>";
     echo "<p class='card-text'>" . $row['description'] . "</p>";
     echo "<p class='card-text price'>" . $row['price'] . "</p>";
     //Only have these button show up if someone has signed up for an account.
     if(isset($_SESSION['loggedin'])){
-    echo " <a href='../accounts/index.php?action=addtolist' class='btn btn-info' id='{$row[id]}'>'Save to Idea List'</a><br>";
+    $clientId = $_SESSION['clientData']['id'];
+    echo "<input type='hidden' name='user_id' value='$clientId'>";
+    echo "<input type='hidden' name='gift_id' value='{$row[id]}'>";
+    echo "<input type='submit' name='submit' class='btn btn-info' value='Add to Ideas'>";
     echo "<br>";
     echo "<a href='listview.php' class='btn btn-info'>View Idea List</a>";
     echo "</div>";
     }
     echo "<a href='gift.php' class='btn btn-info'>Go Back to Idea Search</a>";
     echo "</div>";
-   // echo "</form>"
+   echo "</form>";
 }
 ?>
         </div>

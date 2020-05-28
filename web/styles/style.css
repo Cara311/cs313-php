@@ -118,6 +118,7 @@ main {
   background-clip: border-box;
   border: 1px solid rgba(0,0,0,.125);
   border-radius: .25rem;
+  box-shadow: 3px 2px 8px
 }
 
 .card-body {

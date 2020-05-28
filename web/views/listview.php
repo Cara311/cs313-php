@@ -23,7 +23,8 @@ $db = db_connect();
     ?>
 </nav>
 <main>
-    <h1>Saved Gift Ideas</h1>
+    <h1 class="giftIdeas">Saved Gift Ideas</h1>
+    <hr>
     <div class="container">
         <div class="row">
             <div class="col-sm-4"></div>
@@ -34,7 +35,7 @@ $db = db_connect();
                         <thead>
                             <tr>
                             <th>Gift Ideas</th>
-                            <th>Remove Gift</th>
+                            <th>Remove Gift From List</th>
                             </tr>
                         </thead>
                         <tbody>
