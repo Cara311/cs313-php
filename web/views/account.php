@@ -52,7 +52,7 @@ $db = db_connect();
                             <input type="password" name="clientPassword" id="clientPassword" required pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required class="form-control"><br>
                         </div>
 
-                        <input type="hidden" name="clientLevel" value="1">
+                        <input type="hidden" name="clientLevel" value="2">
 
                         <div class="text-center py-4 mt-3">
                         <button type='submit' class='btn btn-info' value="register">Sign Up</button>
