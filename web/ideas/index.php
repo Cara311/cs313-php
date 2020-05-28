@@ -50,11 +50,11 @@ switch ($action) {
         $deleteResult = deleteProduct($ideaid);
         if ($deleteResult) {
          $_SESSION['message'] = "<p class='error'>Congratulations, $giftname was successfully deleted.</p>";
-         header('location: ../views/listview.php');
+         include "../views/listview.php";
          exit;
         } else {
          $_SESSION['message'] = "<p class='error'>Error: $giftname was not deleted.</p>";
-         header('location: ../views/listview.php');
+         include "../views/listview.php";
          exit;
         }
         break;
