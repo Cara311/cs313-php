@@ -105,7 +105,7 @@ function checkEmail($clientEmail){
    // Get client data based on an email address
 function getClient($clientEmail){
     $db = db_connect();
-    $sql = 'SELECT clientId, clientFirstname, clientLastname, clientEmail, clientLevel, clientPassword 
+    $sql = 'SELECT id, clientFirstname, clientLastname, clientEmail, clientLevel, clientPassword 
             FROM users
             WHERE clientEmail = :email';
     $stmt = $db->prepare($sql);
