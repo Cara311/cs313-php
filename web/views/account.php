@@ -22,26 +22,30 @@ $db = db_connect();
         <div class="card-body">
        
             <form method='post' action='../accounts/index.php'>
+                <input type="hidden" name="action" value="register">
                 <div class="md-form">
-                    <input type="hidden" name="action" value="register">
-                    <label for="clientFirstname">First name:*</label><br>
-                    <input type="text" name="clientFirstname" id="clientFirstname" <?php if(isset($clientFirstname)){echo "value='$clientFirstname'";}  ?> required><br>
+                    <i class="fa fa-user prefix grey-text"></i>
+                    <input type="text" name="clientFirstname" id="clientFirstname" <?php if(isset($clientFirstname)){echo "value='$clientFirstname'";}  ?> required class="form-control"><br>
+                    <label for="clientFirstname" class="font-weight-light">First name:*</label><br>
                 </div>
 
                 <div class="md-form">
-                    <label for="clientLastname">Last name:*</label><br>
-                    <input type="text" name="clientLastname" id="clientLastname" value="<?php if(isset($clientLastname)){echo $clientLastname;}  ?>" required><br>
+                    <i class="fa fa-user prefix grey-text"></i>
+                    <input type="text" name="clientLastname" id="clientLastname" value="<?php if(isset($clientLastname)){echo $clientLastname;}  ?>" required class="form-control"><br>
+                    <label for="clientLastname" class="font-weight-light">Last name:*</label><br>
                 </div>
 
                 <div class="md-form">
-                    <label for="clientEmail">Email:*</label><br>
-                    <input type="email" name="clientEmail" id="clientEmail" value="<?php echo (isset($clientEmail) ? $clientEmail : ' ');  ?>" required><br>
+                    <i class="fa fa-envelope prefix grey-text"></i>
+                    <input type="email" name="clientEmail" id="clientEmail" value="<?php echo (isset($clientEmail) ? $clientEmail : ' ');  ?>" required class="form-control"><br>
+                    <label for="clientEmail" class="font-weight-light">Email:*</label><br>
                 </div>
 
                 <div class="md-form">
-                    <label for="clientPassword">Password:*</label><br>
+                    <i class="fa fa-lock prefix grey-text"></i>
+                    <input type="password" name="clientPassword" id="clientPassword" required pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required class="form-control"><br>
+                    <label for="clientPassword" class="font-weight-light">Password:*</label><br>
                     <span class="password">Passwords must be at least 8 characters and contain at least 1 number, 1 capital letter and 1 special character</span><br> 
-                    <input type="password" name="clientPassword" id="clientPassword" required pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required><br>
                 </div>
 
                 <input type="hidden" name="clientLevel" value="2">
