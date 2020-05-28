@@ -25,7 +25,7 @@ $db = db_connect();
   <input type="hidden" name="action" value="login_user">
  
   <label for="clientEmail">Email:*</label><br>
-  <input type="email" name="clientEmail" title="something@email.com" id="clientEmail" value="<?php echo (isset($clientEmail) ? $clientEmail : ' ');  ?>" required><br>
+  <input type="email" name="clientEmail" title="something@email.com" id="clientEmail" value="email" required><br>
   
   <label for="clientPassword">Password:*</label><br>
   <span class="password">Passwords must be at least 8 characters and contain at least 1 number, 1 capital letter and 1 special character</span><br> 
