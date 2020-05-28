@@ -10,8 +10,6 @@ if (isset($_SESSION['message'])) {
    } 
 
      if(isset($_SESSION['loggedin'])){ ?>
-            
-    <div class="welcome"> Welcome <?php echo $_SESSION['clientData']['clientfirstname'] ?></div> 
     </div>
 
     <div class="container">
@@ -20,7 +18,7 @@ if (isset($_SESSION['message'])) {
             <div class='col-sm-4'>
                 <div class='card'>
                     <div class='card-body'>
-                    <h4 class='card-title'>Account Info</h4>
+                    <h4 class='card-title'>Account Info For <?php echo $_SESSION['clientData']['clientfirstname'] ?> </h4>
                         <ul>
                             <li><a href='../accounts/index.php?action=logout' title='Click to logout'>Log Out</a></li>
                             <li><a href='../ideas/index.php?action=viewlist'>View List</a></li>
