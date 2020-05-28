@@ -5,8 +5,8 @@ ini_set('display_errors',1);
 error_reporting(E_ALL);
 
 //Get the database info 
-require "../library/connections.php";
-require "../library/functions.php";
+require_once '../library/connections.php';
+require_once '../library/functions.php';
 
 ?> 
 

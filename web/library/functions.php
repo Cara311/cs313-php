@@ -1,5 +1,5 @@
 <?php
-//require_once 'connections.php';
+require_once 'connections.php';
 //$db = db_connect();
 
 //Check for valid input
