@@ -1,6 +1,6 @@
 <?php
 require_once 'connections.php';
-$db = db_connect();
+//$db = db_connect();
 
 //Check for valid input
 function validateInput($data){
@@ -11,7 +11,8 @@ function validateInput($data){
 }
 
 //Search for gifts based on interests
-function searchQuery($name, $db) { 
+function searchQuery($name) { 
+    $db = db_connect();
     $stmt = $db->prepare('SELECT g.id, g.gift_name, g.price, g.description, g.image_name, g.gift_link, i.interest FROM gifts AS g JOIN interests i ON i.id = g.interests_id WHERE i.interest = :name');
     //$stmt = $db->prepare('SELECT * FROM gifts AS g JOIN interests AS i ON g.interests_id = i.id WHERE i.interest = :name');
     $stmt->bindValue(':name', $name, PDO::PARAM_STR);
@@ -21,8 +22,8 @@ function searchQuery($name, $db) {
     }
 
 //Display info for specific idea  
-function displayQuery($id, $db) {
-
+function displayQuery($id) {
+    $db = db_connect();
     $stmt = $db->prepare('SELECT * FROM gifts WHERE id = :id');
     //$name= '$name';
     $stmt->bindValue(':id', $id, PDO::PARAM_INT);
@@ -31,8 +32,8 @@ function displayQuery($id, $db) {
     return $idea;
     }   
 
-    function search_interests($db) {
-        
+    function search_interests() {
+        $db = db_connect();
         $statement = $db->query('SELECT interest FROM interests');
         $results = $statement->fetchAll(PDO::FETCH_ASSOC);
         return $results;
@@ -42,7 +43,7 @@ function displayQuery($id, $db) {
 function regUser($clientFirstname, $clientLastname, $clientEmail, $clientLevel, $clientPassword){
  
  // Create a connection object using the connection function
- //$db = db_connect();
+ $db = db_connect();
  
  // The SQL statement
  $sql = 'INSERT INTO users (clientFirstname, clientLastname,clientEmail, clientLevel, clientPassword )
@@ -73,7 +74,7 @@ function regUser($clientFirstname, $clientLastname, $clientEmail, $clientLevel, 
 
 // Check for an existing email address
 function checkExistingEmail($clientEmail) {
-    //$db = db_connect();
+    $db = db_connect();
     $sql = 'SELECT clientEmail FROM users WHERE clientEmail = :email';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':email', $clientEmail, PDO::PARAM_STR);
@@ -104,7 +105,7 @@ function checkEmail($clientEmail){
 
    // Get client data based on an email address
 function getClient($clientEmail){
-    //$db = db_connect();
+    $db = db_connect();
     $sql = 'SELECT clientId, clientFirstname, clientLastname, clientEmail, clientLevel, clientPassword 
             FROM users
             WHERE clientEmail = :email';
