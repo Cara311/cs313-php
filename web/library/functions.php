@@ -164,6 +164,35 @@ function getClient($clientEmail){
     return $rowsChanged;
    }
 
+
+ //Admin can add gift to gift ideas
+ //Function adds new product
+function newGift($giftname, $price, $description, $imagename, $interestid){
+ 
+    $db = db_connect();
+
+    $sql = 'INSERT INTO gifts (gift_name, price, description, image_name, interests_id)
+        VALUES (:giftname, :price, :description, :imagename, :interestid)';
+
+    $stmt = $db->prepare($sql);
+
+    $stmt->bindValue(':giftname', $giftname, PDO::PARAM_STR); 
+    $stmt->bindValue(':price', $price, PDO::PARAM_STR);
+    $stmt->bindValue(':description', $description, PDO::PARAM_STR);
+    $stmt->bindValue(':imagename', $imagename, PDO::PARAM_STR);
+    $stmt->bindValue(':interestid', $interestid, PDO::PARAM_INT);
+    
+    $stmt->execute();
+    
+    $rowsChanged = $stmt->rowCount();
+ 
+    $stmt->closeCursor();
+ 
+    return $rowsChanged;
+   }  
+
+
+
 //function to check if email is valid
 
 //function to build detailed product display

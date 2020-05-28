@@ -59,10 +59,35 @@ switch ($action) {
         }
         break;
 
-                 
+    case 'addgift':    
+        $giftname = filter_input(INPUT_POST, 'giftname', FILTER_SANITIZE_STRING);
+        $price = filter_input(INPUT_POST, 'price', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+        $description = filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING);
+        $imagename = filter_input(INPUT_POST, 'imagename', FILTER_SANITIZE_STRING);
+        $interestid = filter_input(INPUT_POST, 'interestid', FILTER_SANITIZE_NUMBER_INT);
+
+         // Check for missing data
+  if (empty($giftname) || empty($price) || empty($description) || empty($imagename) || empty($interestid)) {
+    $_SESSION['message'] = '<p class="error">Please provide information for all empty form fields.</p>';
+    include '../view/list.php';
+    exit;
+   }
+     // Send the data to the function
+  $prodOutcome = newGift($giftname, $price, $description, $imagename, $interestid);
+
+  if ($prodOutcome === 1) {
+   $_SESSION['message'] = '<p class="error">A new product has been added.</p>';
+   include '../view/list.php';
+   exit;
+  } else {
+   $_SESSION['message'] = '<p class="error">Sorry, we were unable to add a new product. Please try again.</p>';
+   include '../view/list.php';
+   exit;
+  }
+  break;
+                         
 }
 
     
-
 
 ?>
