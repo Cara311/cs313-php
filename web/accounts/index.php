@@ -80,7 +80,9 @@ switch ($action) {
  break; */
  
  case 'register':
-  // Filter and store the data
+
+    echo "It Works";
+ /*  // Filter and store the data
   $clientFirstname = filter_input(INPUT_POST, 'clientFirstname', FILTER_SANITIZE_STRING);
   $clientLastname = filter_input(INPUT_POST, 'clientLastname', FILTER_SANITIZE_STRING);
   $clientEmail = filter_input(INPUT_POST, 'clientEmail', FILTER_SANITIZE_EMAIL);
@@ -127,7 +129,7 @@ switch ($action) {
   }
 
     break;
- }
+ } */
 
 
 
