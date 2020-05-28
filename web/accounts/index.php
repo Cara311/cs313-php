@@ -72,7 +72,7 @@ switch ($action) {
   $clientLastname = $_SESSION['clientData']['clientLastname'];
   $clientEmailadd = $_SESSION['clientData']['clientEmail'];
   $clientLevel = $_SESSION['clientData']['clientLevel'];
-  $clientId = $_SESSION['clientData']['clientId'];
+  $clientId = $_SESSION['clientData']['id'];
  
   
  // Send them to the user view
