@@ -123,7 +123,7 @@ switch ($action) {
   if($regOutcome === 1){
     setcookie('firstname', $clientFirstname, strtotime('+1 year'), '/');
     $_SESSION['message'] = "<p class='error'>Thanks for registering $clientFirstname. Please use your email and password to login.</p>";
-    include '../views/account.php';
+    include '../views/login.php';
    exit;
   } else {
     $_SESSION['message'] = '<p class="error">Sorry $clientFirstname, but the registration failed. Please try again.</p>';
@@ -132,7 +132,6 @@ switch ($action) {
   }
  
     break; 
-
-
 }
+
 ?>
