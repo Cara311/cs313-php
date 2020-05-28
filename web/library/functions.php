@@ -130,7 +130,7 @@ function getClient($clientEmail){
 
    //Add gifts to idea list
    function newIdea($giftId, $userId) {
-    $db = acmeConnect();
+    $db = db_connect();
     $sql = 'INSERT INTO ideas (gift_id, user_id)
      VALUES (:giftId, :userId)';
 
