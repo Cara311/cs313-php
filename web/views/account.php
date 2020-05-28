@@ -18,33 +18,40 @@ $db = db_connect();
     unset($_SESSION['message']);
    } ?>
     <hr>
-    <div class="container">
-        <div class="row">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-8">
+    <div class="card">
+        <div class="card-body">
+       
             <form method='post' action='../accounts/index.php'>
-                <input type="hidden" name="action" value="register">
-                <label for="clientFirstname">First name:*</label><br>
-                <input type="text" name="clientFirstname" id="clientFirstname" <?php if(isset($clientFirstname)){echo "value='$clientFirstname'";}  ?> required><br>
- 
-                <label for="clientLastname">Last name:*</label><br>
-                <input type="text" name="clientLastname" id="clientLastname" value="<?php if(isset($clientLastname)){echo $clientLastname;}  ?>" required><br>
- 
-                <label for="clientEmail">Email:*</label><br>
-                <input type="email" name="clientEmail" id="clientEmail" value="<?php echo (isset($clientEmail) ? $clientEmail : ' ');  ?>" required><br>
+                <div class="md-form">
+                    <input type="hidden" name="action" value="register">
+                    <label for="clientFirstname">First name:*</label><br>
+                    <input type="text" name="clientFirstname" id="clientFirstname" <?php if(isset($clientFirstname)){echo "value='$clientFirstname'";}  ?> required><br>
+                </div>
 
-                <label for="clientPassword">Password:*</label><br>
-                <span class="password">Passwords must be at least 8 characters and contain at least 1 number, 1 capital letter and 1 special character</span><br> 
-                <input type="password" name="clientPassword" id="clientPassword" required pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required><br>
+                <div class="md-form">
+                    <label for="clientLastname">Last name:*</label><br>
+                    <input type="text" name="clientLastname" id="clientLastname" value="<?php if(isset($clientLastname)){echo $clientLastname;}  ?>" required><br>
+                </div>
+
+                <div class="md-form">
+                    <label for="clientEmail">Email:*</label><br>
+                    <input type="email" name="clientEmail" id="clientEmail" value="<?php echo (isset($clientEmail) ? $clientEmail : ' ');  ?>" required><br>
+                </div>
+
+                <div class="md-form">
+                    <label for="clientPassword">Password:*</label><br>
+                    <span class="password">Passwords must be at least 8 characters and contain at least 1 number, 1 capital letter and 1 special character</span><br> 
+                    <input type="password" name="clientPassword" id="clientPassword" required pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required><br>
+                </div>
 
                 <input type="hidden" name="clientLevel" value="2">
 
+                <div class="text-center py-4 mt-3">
                 <button type='submit' class='btn btn-info' value="register">Sign Up</button>
+                </div>
                 
             </form>
-        </div>
-        <div class="col-sm-2"></div>
-        </div>
+        </div>    
     </div>
     
     
