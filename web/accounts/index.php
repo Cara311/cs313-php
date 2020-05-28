@@ -20,6 +20,10 @@ if ($action == NULL) {
 
 switch ($action) {
 
+  case "account":
+    include "../views/list.php";
+    break;
+
 case 'login':
     include "../views/login.php";
     break;
