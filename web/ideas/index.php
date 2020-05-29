@@ -69,7 +69,7 @@ switch ($action) {
          // Check for missing data
   if (empty($giftname) || empty($price) || empty($description) || empty($imagename) || empty($interestid)) {
     $_SESSION['message'] = '<p class="error">Please provide information for all empty form fields.</p>';
-    include '../view/list.php';
+    include '../views/list.php';
     exit;
    }
      // Send the data to the function
@@ -77,11 +77,11 @@ switch ($action) {
 
   if ($prodOutcome === 1) {
    $_SESSION['message'] = '<p class="error">A new product has been added.</p>';
-   include '../view/list.php';
+   include '../views/list.php';
    exit;
   } else {
    $_SESSION['message'] = '<p class="error">Sorry, we were unable to add a new product. Please try again.</p>';
-   include '../view/list.php';
+   include '../views/list.php';
    exit;
   }
   break;
