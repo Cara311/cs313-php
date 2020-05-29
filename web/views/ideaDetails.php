@@ -57,8 +57,10 @@ $db = db_connect();
             }
             ?>
         </div>
+        </div>
         <div class="col-sm-4"></div>
     </div>
+
     <?php include '../common/client.php'; ?>
 </div>
 
