@@ -64,7 +64,7 @@ foreach ($idea as $row)
         </div>
         <div class="col-sm-4"></div>
     </div>
-
+    <?php include '../common/client.php'; ?>
 </div>
 
 <?php include '../common/footer.php'; ?>

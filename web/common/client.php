@@ -1,4 +1,5 @@
 <div class="row info">
+            <hr>
             <div class="col-sm-1"></div>    
             <div class="col-sm-1"></div>
             <div class="col-sm-1"></div>    

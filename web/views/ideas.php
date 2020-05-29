@@ -38,7 +38,7 @@ $gifts = searchQuery($searchText, $db);
       
     </div>
     <div class="col-sm-4"></div>
-
+    <?php include '../common/client.php'; ?>
 </div>
 
 
