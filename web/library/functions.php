@@ -193,7 +193,7 @@ function newGift($giftname, $price, $description, $imagename, $interestid){
 
 
    //Function to change client password
-   function changePass($hashedPassword, $clientId) {
+   function changePass($clientPassword, $clientId) {
     $db = db_connect();
 
     $sql = 'UPDATE users SET clientPassword = :clientPassword WHERE id = :clientId'; 
