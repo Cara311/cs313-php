@@ -56,6 +56,8 @@ INSERT INTO interests (interest) VALUES ('animals');--3
 INSERT INTO interests (interest) VALUES ('gaming');--4
 INSERT INTO interests (interest) VALUES ('reading');--5
 INSERT INTO interests (interest) VALUES ('movies');--6
+INSERT INTO interests (interest) VALUES ('fitness');--7
+INSERT INTO interests (interest) VALUES ('photography');--8
 
 --Insert Gift Ideas
 

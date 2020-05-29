@@ -40,7 +40,7 @@ if (isset($_SESSION['message'])) {
             <div class='col-sm-4'>
                 <div class='card'>
                     <div class='card-body'>
-                    <h4 class='card-title'>Admin Info</h4>
+                    <h4 class='card-title'>Add Gift Idea</h4>
                     <form method='post' action='../ideas/index.php'>
                         <input type="hidden" name="action" value="addgift">
                         <div class="md-form">
@@ -72,12 +72,11 @@ if (isset($_SESSION['message'])) {
                                 <option value='3'>Animals</option>  
                                 <option value='4'>Gaming</option>  
                                 <option value='5'>Reading</option>
-                                <option value='6'>Movies</option>           
+                                <option value='6'>Movies</option>  
+                                <option value='7'>Fitness</option>  
+                                <option value='8'>Photography</option>       
                             </select> 
-                            <input type="number" name="description" id="description"  required class="form-control"><br>
                         </div>
-
-                       
 
                         <div class="text-center py-4 mt-3">
                         <button type='submit' class='btn btn-info' value="add">Add Gift</button>
