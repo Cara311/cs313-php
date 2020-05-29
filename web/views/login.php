@@ -15,7 +15,7 @@ require_once '../library/functions.php';
     <h1 class="giftIdeas">Sign In to Your Account</h1>
     <hr>
     <div class="container">
-        <?php include '../common/client.php'; ?>
+        <?php include '../common/message.php'; ?>
         <div class="row">
             <div class="col-sm-4"></div>
             <div class="col-sm-4">

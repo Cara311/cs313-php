@@ -13,7 +13,7 @@ $db = db_connect();
     <h1 class="giftIdeas">Sign Up For An Account</h1>
     <hr>
     <div class="container">
-        <?php include '../common/client.php'; ?>
+        <?php include '../common/message.php'; ?>
         <div class="row">
         <div class="col-sm-4"></div>
         <div class="col-sm-4">   

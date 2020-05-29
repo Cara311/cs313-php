@@ -24,7 +24,7 @@ $db = db_connect();
 ?>
 
 <div class="container">
-    <?php include '../common/client.php'; ?>
+    <?php include '../common/message.php'; ?>
     <div class="row">
         <div class="col-sm-4"></div>
         <?php
