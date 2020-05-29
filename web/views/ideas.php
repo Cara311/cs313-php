@@ -15,9 +15,8 @@ $gifts = searchQuery($searchText, $db);
 }
 ?>
 
-
-<div class="container">
 <h1 class="giftIdeas">Gift Ideas</h1>
+<hr>
 <div class="container">
   <div class="row">
     <div class="col-sm-4"></div>
@@ -38,7 +37,8 @@ $gifts = searchQuery($searchText, $db);
       
     </div>
     <div class="col-sm-4"></div>
-    <?php include '../common/client.php'; ?>
+  </div>
+  <?php include '../common/client.php'; ?>
 </div>
 
 

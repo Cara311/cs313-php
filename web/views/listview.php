@@ -12,17 +12,7 @@ $db = db_connect(); */
      //print_r($idealist);
    }
 ?>
-<nav>
-    <?php if(isset($_SESSION['loggedin'])){ ?>
-            
-            <div class="welcome"> Welcome <?php echo $_SESSION['clientData']['clientfirstname'] ?></div>
 
-              <a href='../accounts/index.php?action=logout' title='Click to logout'>Log Out</a>
-             <?php } else { ?>
-              <a href='../accounts/index.php?action=login' title='Click to register or login'>My Account</a> 
-           <?php }
-    ?>
-</nav>
 <main>
     <h1 class="giftIdeas">Saved Gift Ideas</h1>
     <hr>

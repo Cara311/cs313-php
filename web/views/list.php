@@ -3,18 +3,13 @@
 <main>
     <div class="message">
     <?php
-if (isset($_SESSION['message'])) {
-      echo $_SESSION['message'];
-    //unset session message
-    unset($_SESSION['message']); 
-   } 
-
      if(isset($_SESSION['loggedin'])){
          
          ?>
     </div>
 
     <div class="container">
+        <?php include '../common/message.php'; ?>
         <div class="row">
             <div class="col-sm-4"></div>
             <div class='col-sm-4'>
