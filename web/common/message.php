@@ -16,7 +16,3 @@
     <div class="col-sm-1"></div>
     <div class="col-sm-1"></div>
 </div>
-<?php
-        if (isset($_SESSION['message'])) {
-            echo "<hr>";
-    } ?>
