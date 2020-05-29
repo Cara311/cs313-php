@@ -192,6 +192,27 @@ function newGift($giftname, $price, $description, $imagename, $interestid){
    }  
 
 
+   //Function to change client password
+   function changePass($hashedPassword, $clientId) {
+    $db = db_connect();
+
+    $sql = 'UPDATE users SET clientPassword = :clientPassword WHERE id = :clientId'; 
+ 
+    $stmt = $db->prepare($sql);
+ 
+    $stmt->bindValue(':clientPassword', $clientPassword, PDO::PARAM_STR);
+    $stmt->bindValue(':clientId', $clientId, PDO::PARAM_INT);
+
+     $stmt->execute(); 
+
+    $rowsChanged = $stmt->rowCount();
+
+     $stmt->closeCursor();
+ 
+    return $rowsChanged;
+   }
+
+
 
 //function to check if email is valid
 

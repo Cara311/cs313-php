@@ -149,6 +149,36 @@ case 'logout':
         session_destroy();
         header('Location: ../views/gift.php');
         break;
+
+case 'changePass':  
+  $clientPassword = filter_input(INPUT_POST, 'clientPassword', FILTER_SANITIZE_STRING);
+  $clientId = filter_input(INPUT_POST, 'clientId', FILTER_SANITIZE_NUMBER_INT);
+  
+  $checkPassword = checkPassword($clientPassword);
+  if(empty($checkPassword))
+   {
+    $_SESSION['message'] = '<p class="error">Please provide information for all empty form fields.</p>';
+    include '../views/list.php';
+    exit; 
+  }
+  // Hash the checked password
+  $hashedPassword = password_hash($clientPassword, PASSWORD_DEFAULT);
+  $modPassOutcome = changePass($hashedPassword, $clientId);
+  
+    if($modPassOutcome) {
+  $_SESSION['message'] = "<p class='error'>Congratulations, your password was successfully updated.</p>";
+   include '../views/list.php';
+  exit;
+ } else {
+  $_SESSION['message'] = "<p class='error'>Error. Your password was not updated.</p>";
+  include '../views/list.php';
+  exit;
+ }
+    break;
+  
 }
+
+
+
 
 ?>

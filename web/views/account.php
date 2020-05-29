@@ -55,6 +55,8 @@ $db = db_connect();
                         <input type="hidden" name="clientLevel" value="2">
 
                         <div class="text-center py-4 mt-3">
+                        <br>
+                        <br>
                         <button type='submit' class='btn btn-info' value="register">Sign Up</button>
                         </div>
                     </form>
