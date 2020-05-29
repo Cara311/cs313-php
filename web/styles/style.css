@@ -9,7 +9,11 @@ h1 {
 h2 {
   font-family: 'Special Elite', cursive;
   font-size: 14px;
+}
 
+h4 {
+  font-family: 'Special Elite', cursive;
+  font-size: 18px;
 }
 
 p {
@@ -154,6 +158,11 @@ main {
 
 .accountopt {
   list-style-type: none;
+  margin: 10px;
+}
+
+.update {
+  font-size: 16px;
 }
 
 
