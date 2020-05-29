@@ -11,14 +11,9 @@ $db = db_connect();
 
 <main>
     <h1 class="giftIdeas">Sign Up For An Account</h1>
-    <?php
-   if (isset($_SESSION['message'])) {
-      echo $_SESSION['message'];
-    //unset session message
-    unset($_SESSION['message']);
-   } ?>
     <hr>
     <div class="container">
+        <?php include '../common/client.php'; ?>
         <div class="row">
         <div class="col-sm-4"></div>
         <div class="col-sm-4">   

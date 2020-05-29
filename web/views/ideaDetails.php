@@ -24,15 +24,10 @@ $db = db_connect();
 ?>
 
 <div class="container">
+    <?php include '../common/client.php'; ?>
     <div class="row">
         <div class="col-sm-4"></div>
         <?php
-   if (isset($_SESSION['message'])) {
-      echo $_SESSION['message'];
-    //unset session message
-    unset($_SESSION['message']); 
-   } 
-
 foreach ($idea as $row)
 {
     //echo "<form method='post' action='htmlspecialchars($_SERVER['PHP_SELF'])?action=add&id=1'>";

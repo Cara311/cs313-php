@@ -24,15 +24,10 @@ $db = db_connect(); */
     ?>
 </nav>
 <main>
-    <?php
-     if (isset($_SESSION['message'])) {
-        echo $_SESSION['message'];
-      //unset session message
-      unset($_SESSION['message']); 
-     } ?>
     <h1 class="giftIdeas">Saved Gift Ideas</h1>
     <hr>
     <div class="container">
+        <?php include '../common/message.php'; ?>
         <div class="row">
             <div class="col-sm-4"></div>
             <div class='col-sm-4'>
@@ -68,9 +63,8 @@ $db = db_connect(); */
                 </div>
             </div>
         <div class="col-sm-4"></div>
-        <?php include '../common/client.php'; ?>
     </div>
-
+    <?php include '../common/client.php'; ?>
 </div>
 
 
