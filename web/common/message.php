@@ -1,5 +1,4 @@
 <div class="row message">
-   
     <div class="col-sm-1"></div>    
     <div class="col-sm-1"></div>
     <div class="col-sm-1"></div>    
@@ -16,9 +15,8 @@
     <div class="col-sm-1"></div>
     <div class="col-sm-1"></div>
     <div class="col-sm-1"></div>
-
-    <?php
+</div>
+<?php
         if (isset($_SESSION['message'])) {
             echo "<hr>";
     } ?>
-</div>

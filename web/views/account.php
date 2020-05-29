@@ -14,11 +14,12 @@ $db = db_connect();
     <hr>
     <div class="container">
         <?php include '../common/message.php'; ?>
+
         <div class="row">
-        <div class="col-sm-4"></div>
-        <div class="col-sm-4">   
-            <div class="card">
-                <div class="card-body">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">   
+                <div class="card">
+                    <div class="card-body">
        
                     <form method='post' action='../accounts/index.php'>
                         <input type="hidden" name="action" value="register">
@@ -55,17 +56,14 @@ $db = db_connect();
                         <button type='submit' class='btn btn-info' value="register">Sign Up</button>
                         </div>
                     </form>
+                    </div>
                 </div>
-            </div>
-            <p>Already Have an Account?</p>
-            <a href="login.php" class= 'btn btn-info'>Login</a>  
-        </div>   
-        <div class="col-sm-4"></div>
+                <p>Already Have an Account?</p>
+                <a href="login.php" class= 'btn btn-info'>Login</a>  
+            </div>   
+            <div class="col-sm-4"></div>
         </div> 
     </div>
-    
-
-
 </main>
   
   
