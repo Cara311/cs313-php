@@ -213,16 +213,4 @@ function newGift($giftname, $price, $description, $imagename, $interestid){
    }
 
 
-
-//function to check if email is valid
-
-//function to build detailed product display
-
-//function to build list of interests options
-
-//Show a list of gift ideas
-//Search for gift idea by interest
-//Save a gift idea
-//Show detailed gift idea
-
 ?>

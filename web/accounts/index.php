@@ -175,6 +175,9 @@ case 'changePass':
   exit;
  }
     break;
+   
+  default:  
+  include '../views/login.php';
   
 }
 
