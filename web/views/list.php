@@ -17,8 +17,8 @@
                     <div class='card-body'>
                     <h4 class='card-title'>Account Info For <?php echo $_SESSION['clientData']['clientfirstname'] ?> </h4>
                         <ul>
-                            <li><a href='../accounts/index.php?action=logout' title='Click to logout'>Log Out</a></li>
-                            <li><a href='../ideas/index.php?action=viewlist'>View List</a></li>
+                            <li class="accountopt"><a href='../accounts/index.php?action=logout' title='Click to logout' class='btn btn-info' >Log Out</a></li>
+                            <li class="accountopt"><a href='../ideas/index.php?action=viewlist' class='btn btn-info'>View List</a></li>
                         </ul>
   
                         <h2 class='update'>Change Password</h2>
