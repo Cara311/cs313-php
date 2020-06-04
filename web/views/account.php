@@ -46,6 +46,16 @@ $db = db_connect();
                             <span class="password">Passwords must be at least 8 characters and contain at least 1 number, 1 capital letter and 1 special character</span><br> 
                             <i class="fa fa-lock prefix grey-text"></i>
                             <input type="password" name="clientPassword" id="clientPassword" required pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required class="form-control"><br>
+                            <span id='errorThing' class='hidden'>*</span>
+                        </div>
+
+                        <div class='md-form'>
+                            <label for='passwordConfirmationInput' class='control-label col-sm-1'>Password:</label>
+                            <input type='password' name='passwordConfirmation' id='passwordConfirmationInput' class='form-control' placeholder='Enter password' onkeyup='checkPassword()'>
+        
+                            <div>
+                            <small id='passwordInputHelp' class='form-text text-muted'>Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</small>
+                            </div>";
                         </div>
 
                         <input type="hidden" name="clientLevel" value="2">
