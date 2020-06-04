@@ -22,6 +22,7 @@
             <li><a href="../views/team1.php">Week 3 Team Activity</a></li>
             <li><a href="../views/shop.php">Week 3 Assignment</a></li>
             <li><a href="../views/gift.php">Project 1</a></li>
+            <li><a href="../w7/signIn.php">Week 7 Team Activity</a></li>
           </ul>
         </li>
         <li><a href="../views/otters.php">Otters</a></li>

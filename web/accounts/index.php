@@ -148,6 +148,7 @@ case 'logout':
     // Destroy the session.
         session_destroy();
         header('Location: ../views/gift.php');
+        //die();
         break;
 
 case 'changePass':  
