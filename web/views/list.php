@@ -28,7 +28,6 @@
 
                         <div class="md-form">
                         <label for="clientPassword">Password:*</label><br>
-                        <p>By entering a password, your current password will be changed</p>
                         <div>
                             <small id='passwordInputHelp' class='form-text text-muted'>Passwords must be at least 8 characters and contain at least 1 number, 1 capital letter and 1 special character</small>
                         </div><br> 
