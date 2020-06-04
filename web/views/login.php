@@ -30,7 +30,10 @@ require_once '../library/functions.php';
                         </div>
                         <div class="form-group">    
                             <label for="clientPassword">Password:*</label><br>
-                            <span class="password">Passwords must be at least 8 characters and contain at least 1 number, 1 capital letter and 1 special character</span><br> 
+                            <div>
+                            <small id='passwordInputHelp' class='form-text text-muted'>Passwords must be at least 8 characters and contain at least 1 number, 1 capital letter and 1 special character</small>
+                            </div>
+                            <br>
                             <input type="password" name="clientPassword" id="clientPassword" required pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required><br>
                         </div>
                          <input type="submit" name="submit" id="logbttn"  class="btn btn-info" value="Login">

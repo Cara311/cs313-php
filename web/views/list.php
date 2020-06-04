@@ -29,7 +29,9 @@
                         <div class="md-form">
                         <label for="clientPassword">Password:*</label><br>
                         <p>By entering a password, your current password will be changed</p>
-                        <span class="password">Passwords must be at least 8 characters and contain at least 1 number, 1 capital letter and 1 special character</span><br> 
+                        <div>
+                            <small id='passwordInputHelp' class='form-text text-muted'>Passwords must be at least 8 characters and contain at least 1 number, 1 capital letter and 1 special character</small>
+                        </div><br> 
                         <input type="password" name="clientPassword" id="clientPassword" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required><br>
                         </div>
                         <br>

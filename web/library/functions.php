@@ -212,5 +212,15 @@ function newGift($giftname, $price, $description, $imagename, $interestid){
     return $rowsChanged;
    }
 
-
+   //Function to get gift info based on id
+   function getDetails($id, $db) {
+    
+    $stmt = $db->prepare('SELECT gift_name, price, description, image_name FROM gifts WHERE id = :id');
+    //$name= '$name';
+    $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+    $stmt->execute();
+    $idea = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $stmt->closeCursor();
+    return $idea;
+   }
 ?>

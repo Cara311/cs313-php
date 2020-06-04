@@ -53,6 +53,27 @@ $db = db_connect(); */
                 </div>
             </div>
         <div class="col-sm-4"></div>
+
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class='col-sm-4'>
+                <div class='card'>
+                <div class='card-body'>
+                <form>
+                    <select name="users" onchange="showUser(this.value)">
+                        <option selected="selected">View Gift Details</option>
+                        <?php
+                        foreach ($idealist as $option)
+                        {
+                            echo "<option value='{$option['ideas_id']}'>" . $option['gift_name'] . "</option>";
+                        }?>          
+                    </select> 
+                </form>
+                </div>
+                </div>
+            </div>
+        <div class="col-sm-4"></div>
+
     </div>
     <?php include '../common/client.php'; ?>
 </div>
