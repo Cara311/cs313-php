@@ -4,7 +4,7 @@ function checkPassword()
 {
 
     // Element ID holding the original password
-    var passwordElement = 'clientPassword';
+    var clientPassword = 'clientPassword';
 
     // Element ID holding the 2nd password
      var confirmationpasswordElement = 'passwordConfirmationInput';
