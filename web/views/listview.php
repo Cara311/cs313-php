@@ -38,7 +38,7 @@ $db = db_connect(); */
                                     echo "<td>" . $row['gift_name'] . "</td>";
                                     echo "<form action='../ideas/index.php' method='POST'>";
                                     echo "<input type='hidden' name='action' value='delete'>";
-                                    echo "<input type='hidden' name='ideaid' value='{$row['gift_id']}'>";
+                                    echo "<input type='hidden' name='ideaid' value='{$row['ideas_id']}'>";
                                     echo "<input type='hidden' name='giftname' value='{$row['gift_name']}'>";
                                     echo "<td>" . "<input type='submit' name='submit' class='btn btn-info' value='X'>" . "</td>";
                                     echo "</form>";

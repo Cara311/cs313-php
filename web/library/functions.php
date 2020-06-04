@@ -214,7 +214,7 @@ function newGift($giftname, $price, $description, $imagename, $interestid){
 
    //Function to get gift info based on gift id
    function getDetails($id, $db) {
-    $stmt = $db->prepare('SELECT g.id, g.gift_name, g.price, g.description, g.image_name FROM gifts AS g JOIN ideas i ON i.gift_id = g.id WHERE i.gift_id = :id');
+    $stmt = $db->prepare('SELECT g.id, g.gift_name, g.price, g.description, g.image_name FROM gifts AS g WHERE g.id = :id');
     //$name= '$name';
     $stmt->bindValue(':id', $id, PDO::PARAM_INT);
     $stmt->execute();
