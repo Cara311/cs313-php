@@ -29,7 +29,8 @@ CREATE TABLE gifts (
     user_id INT NOT NULL REFERENCES users(id)
   );
 
-  --ALTER
+
+/*   --ALTER
   ALTER TABLE ideas
 RENAME COLUMN id TO ideas_id;
   --ALTER TABLE gifts
@@ -47,17 +48,17 @@ WHERE interests.id = 2;
 INSERT INTO users (clientFirstname, clientLastname, clientEmail, clientPassword, clientLevel) VALUES ('Admin', 'User', 'admin1@codeotter.com', 'AdminUser-1', 1);
 
 --Insert Admin Ideas
-INSERT INTO ideas (gift_id, user_id) VALUES (12, 22);
+INSERT INTO ideas (gift_id, user_id) VALUES (12, 22); */
 
 --Insert Interests
-INSERT INTO interests (interest) VALUES ('fashion'); --1
-INSERT INTO interests (interest) VALUES ('outdoors');--2
-INSERT INTO interests (interest) VALUES ('animals');--3
-INSERT INTO interests (interest) VALUES ('gaming');--4
-INSERT INTO interests (interest) VALUES ('reading');--5
-INSERT INTO interests (interest) VALUES ('movies');--6
-INSERT INTO interests (interest) VALUES ('fitness');--7
-INSERT INTO interests (interest) VALUES ('photography');--8
+INSERT INTO interests (interest) VALUES ('fashion'); 
+INSERT INTO interests (interest) VALUES ('outdoors');
+INSERT INTO interests (interest) VALUES ('animals');
+INSERT INTO interests (interest) VALUES ('gaming');
+INSERT INTO interests (interest) VALUES ('reading');
+INSERT INTO interests (interest) VALUES ('movies');
+INSERT INTO interests (interest) VALUES ('fitness');
+INSERT INTO interests (interest) VALUES ('photography');
 
 --Insert Gift Ideas
 
@@ -85,7 +86,7 @@ INSERT INTO gifts (gift_name, price, description, image_name, interests_id) VALU
 INSERT INTO gifts (gift_name, price, description, image_name, interests_id) VALUES ('Inflatable Kayak', 250, 'Roll up this kayak to take it anywhere then inflate it', 'kayak.jpg', 2);
 
 
---Query by Interest
+/* --Query by Interest
 SELECT * FROM gifts AS g
 JOIN interests AS i
 ON g.interests_id = i.id
@@ -94,5 +95,5 @@ WHERE i.interest = 'fashion';
 --Query to bring up product
 
 --Query to bring up user's saved ideas
-SELECT g.id, g.gift_name, i.ideas_id FROM gifts AS g JOIN ideas i ON i.gift_id = g.id WHERE i.user_id = 22;
+SELECT g.id, g.gift_name, i.ideas_id FROM gifts AS g JOIN ideas i ON i.gift_id = g.id WHERE i.user_id = 22; */
 

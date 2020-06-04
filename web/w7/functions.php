@@ -44,7 +44,7 @@ function registerNewUser($userName, $password) {
         $db = DbConnection();
 
         // TODO: Modify this to have the correct table name
-        $sql = 'INSERT INTO public.users (username, password) VALUES (:userName, :password)';
+        $sql = 'INSERT INTO account (username, password) VALUES (:userName, :password)';
 
         $stmt = $db->prepare($sql);
 
@@ -71,7 +71,7 @@ function getPasswordWithUserName($userName) {
 
         $db = DbConnection();
 
-        $sql = 'SELECT password FROM public.users WHERE username = :userName';
+        $sql = 'SELECT password FROM account WHERE username = :userName';
         $stmt = $db -> prepare($sql);
         $stmt-> bindValue(':userName', $userName, PDO::PARAM_STR);
         $stmt -> execute();
