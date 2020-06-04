@@ -13,7 +13,7 @@ $ideaid = filter_input(INPUT_GET, 'q', FILTER_SANITIZE_NUMBER_INT);
 $result = getDetails($ideaid, $db);
 
 
-echo "<table>
+echo "<table class='table table-hover'>
 <tr>
 <th>Gift Name</th>
 <th>Price</th>

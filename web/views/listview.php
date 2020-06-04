@@ -22,58 +22,71 @@ $db = db_connect(); */
             <div class="col-sm-4"></div>
             <div class='col-sm-4'>
                 <div class='card'>
-                <div class='card-body'>
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                            <th>Gift Ideas</th>
-                            <th>Remove Gift</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                            <?php  
-                                foreach ($idealist as $row)
-                                {
-                                echo "<td>" . $row['gift_name'] . "</td>";
-                                echo "<form action='../ideas/index.php' method='POST'>";
-                                echo "<input type='hidden' name='action' value='delete'>";
-                                echo "<input type='hidden' name='ideaid' value='{$row['ideas_id']}'>";
-                                echo "<input type='hidden' name='giftname' value='{$row['gift_name']}'>";
-                                echo "<td>" . "<input type='submit' name='submit' class='btn btn-info' value='X'>" . "</td>";
-                                echo "</form>";
-                                echo "</tr>";
-                                }
-                            ?>
-                            
-                        </tbody>
-                    </table>
-                    <a href='../views/gift.php' class='btn btn-info'>Go Back to Idea Search</a>
-                </div>
+                    <div class='card-body'>
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                <th>Gift Ideas</th>
+                                <th>Remove Gift</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <?php  
+                                    foreach ($idealist as $row)
+                                    {
+                                    echo "<td>" . $row['gift_name'] . "</td>";
+                                    echo "<form action='../ideas/index.php' method='POST'>";
+                                    echo "<input type='hidden' name='action' value='delete'>";
+                                    echo "<input type='hidden' name='ideaid' value='{$row['ideas_id']}'>";
+                                    echo "<input type='hidden' name='giftname' value='{$row['gift_name']}'>";
+                                    echo "<td>" . "<input type='submit' name='submit' class='btn btn-info' value='X'>" . "</td>";
+                                    echo "</form>";
+                                    echo "</tr>";
+                                    }
+                                ?>
+                                
+                            </tbody>
+                        </table>
+                        <a href='../views/gift.php' class='btn btn-info'>Go Back to Idea Search</a>
+                    </div>
                 </div>
             </div>
-        <div class="col-sm-4"></div>
+            <div class="col-sm-4"></div>
+        </div>    
 
         <div class="row">
             <div class="col-sm-4"></div>
             <div class='col-sm-4'>
                 <div class='card'>
-                <div class='card-body'>
-                <form>
-                    <select name="users" onchange="showUser(this.value)">
-                        <option selected="selected">View Gift Details</option>
-                        <?php
-                        foreach ($idealist as $option)
-                        {
-                            echo "<option value='{$option['ideas_id']}'>" . $option['gift_name'] . "</option>";
-                        }?>          
-                    </select> 
-                </form>
-                </div>
+                    <div class='card-body'>
+                        <form>
+                            <select name="users" onchange="showUser(this.value)">
+                                <option selected="selected">View Gift Details</option>
+                                <?php
+                                foreach ($idealist as $option)
+                                {
+                                    echo "<option value='{$option['ideas_id']}'>" . $option['gift_name'] . "</option>";
+                                }?>          
+                            </select> 
+                        </form>
+                    </div>
                 </div>
             </div>
-        <div class="col-sm-4"></div>
+            <div class="col-sm-4"></div>
+        </div>  
 
+         <div class="row">
+            <div class="col-sm-3"></div>
+            <div class='col-sm-6'>
+                <div class='card'>
+                    <div class='card-body'>
+                        <div id="txtHint"><b>Gift info will be listed here...</b></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>   
     </div>
     <div id="txtHint"><b>Gift info will be listed here...</b></div>
     <?php include '../common/client.php'; ?>
