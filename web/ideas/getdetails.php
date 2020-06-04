@@ -1,11 +1,13 @@
 <?php
 //$q = intval($_GET['q']);
+require "../library/functions.php";
 
 $db = db_connect();
 if (!$db) {
   die('Could not connect: ' . mysqli_error($db));
 }
 
+echo $q;
 $ideaid = filter_input(INPUT_GET, 'q', FILTER_SANITIZE_NUMBER_INT);
 
 $result = getDetails($ideaid, $db);
