@@ -7,12 +7,9 @@ if (!$db) {
   die('Could not connect: ' . mysqli_error($db));
 }
 
-echo $q;
 $ideaid = filter_input(INPUT_GET, 'q', FILTER_SANITIZE_NUMBER_INT);
 
 $result = getDetails($ideaid, $db);
-
-echo $result;
 
 echo "<table class='table table-hover'>
 <tr>
