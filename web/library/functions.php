@@ -222,4 +222,3 @@ function newGift($giftname, $price, $description, $imagename, $interestid){
     $stmt->closeCursor();
     return $idea;
    }
-?>

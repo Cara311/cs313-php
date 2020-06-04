@@ -9,7 +9,7 @@ $db = db_connect(); */
      $id = $_SESSION['clientData']['id'];
      // Now run the query to find the text in the database, and then save the results as a variable
      $idealist = listideas($id);
-     print_r($idealist);
+     //print_r($idealist);
    }
 ?>
 
