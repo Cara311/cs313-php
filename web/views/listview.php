@@ -55,7 +55,9 @@ $db = db_connect(); */
             <div class="col-sm-4"></div>
         </div>    
 
-        <div class="row">
+        <br>
+
+        <div class="row" id="slist">
             <div class="col-sm-4"></div>
             <div class='col-sm-4'>
                 <div class='card'>
@@ -66,7 +68,7 @@ $db = db_connect(); */
                                 <?php
                                 foreach ($idealist as $option)
                                 {
-                                    echo "<option value='{$option['ideas_id']}'>" . $option['gift_name'] . "</option>";
+                                    echo "<option value='{$option['gift_id']}'>" . $option['gift_name'] . "</option>";
                                 }?>          
                             </select> 
                         </form>
@@ -76,7 +78,9 @@ $db = db_connect(); */
             <div class="col-sm-4"></div>
         </div>  
 
-         <div class="row">
+        <br>
+
+         <div class="row" id="ginfo">
             <div class="col-sm-3"></div>
             <div class='col-sm-6'>
                 <div class='card'>
@@ -88,7 +92,6 @@ $db = db_connect(); */
             <div class="col-sm-3"></div>
         </div>   
     </div>
-    <div id="txtHint"><b>Gift info will be listed here...</b></div>
     <?php include '../common/client.php'; ?>
 </div>
 

@@ -25,7 +25,7 @@ foreach ($result as $row) {
   echo "<td>" . $row['gift_name'] . "</td>";
   echo "<td>" . $row['price'] . "</td>";
   echo "<td>" . $row['description'] . "</td>";
-  echo "<td>" . $row['image_name'] . "</td>";
+  echo "<td>" . "<img class='card-img-top thumbnail' src='../images/{$row[image_name]}' alt='{$row[gift_name]}'>" . "</td>";
   echo "</tr>";
 }
 echo "</table>";
