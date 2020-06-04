@@ -16,24 +16,29 @@ function checkPassword($clientPassword) {
 
 // When trying this live, it won't be needed since it is already in the other file
 function DbConnection() {
-    $host = "";
-    $db_name = "";
-    $user = "u";
-    $password = "";
-    $port = 5432;
-
-    $dsn = "pgsql:host=$host;dbname=$db_name;user=$user;port=$port;password=$password;sslmode=require";
-
-    $options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
-
-    try {
-        $db = new PDO($dsn);
-        return $db;
-    } catch (PDOException $e){
-        echo "Connection to the database failed";
-
-        echo $e;
+    try
+    {
+      $dbUrl = getenv('DATABASE_URL');
+      $dbOpts = parse_url($dbUrl);
+    
+      $dbHost = $dbOpts["host"];
+      $dbPort = $dbOpts["port"];
+      $dbUser = $dbOpts["user"];
+      $dbPassword = $dbOpts["pass"];
+      $dbName = ltrim($dbOpts["path"],'/');
+    
+      $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+    
+      $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
     }
+    
+    catch (PDOException $ex)
+    {
+      echo 'Error!: ' . $ex->getMessage();
+      die();
+    }
+    return $db;
 }
 
 // Adds a new user to the database.  Keeps the user_role as customer
