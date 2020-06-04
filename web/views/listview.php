@@ -75,6 +75,7 @@ $db = db_connect(); */
         <div class="col-sm-4"></div>
 
     </div>
+    <div id="txtHint"><b>Gift info will be listed here...</b></div>
     <?php include '../common/client.php'; ?>
 </div>
 
