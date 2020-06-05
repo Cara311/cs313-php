@@ -16,7 +16,7 @@ echo "<table class='table table-hover'>
 <th>Gift Name</th>
 <th>Price</th>
 <th>Description</th>
-<th>Image Name</th>
+<th>Thumbnail</th>
 </tr>";
 foreach ($result as $row) {
   echo "<tr>";
